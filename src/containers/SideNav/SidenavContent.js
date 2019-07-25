@@ -120,38 +120,43 @@ class SidenavContent extends Component {
             <ul className="sub-menu">
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/crypto">
-                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.crypto"/></span>
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.allnews"/></span>
                 </NavLink>
               </li>
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/listing">
-                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.listing"/></span>
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.newsagency"/></span>
                 </NavLink>
               </li>
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/crm">
-                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.crm"/></span>
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.freelancer"/></span>
                 </NavLink>
               </li>
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/intranet">
-                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.intranet"/></span>
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.onateam"/></span>
                 </NavLink>
               </li>
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/eCommerce">
                                     <span className="nav-text text-transform-none"><IntlMessages
-                                      id="sidebar.dashboard.ecommerce"/></span>
+                                      id="sidebar.dashboard.government"/></span>
                 </NavLink>
               </li>
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/news">
-                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.news"/></span>
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.inbox"/></span>
                 </NavLink>
               </li>
               <li>
                 <NavLink className="prepend-icon" to="/app/dashboard/misc">
-                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.misc"/></span>
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.sentitems"/></span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="prepend-icon" to="/app/dashboard/misc">
+                  <span className="nav-text"><IntlMessages id="sidebar.dashboard.chat"/></span>
                 </NavLink>
               </li>
             </ul>
