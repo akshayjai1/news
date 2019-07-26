@@ -1,0 +1,51 @@
+state of news
+1. new
+2. in progress
+3. proof reading
+ half edited news
+4. review ( edit it back with some comments ) so the news goes into in progress
+5. completed
+
+(i did the proof ready, i skipped proof reading, i approve the news)
+
+junior
+
+
+we can have a chart for last week
+where we show in progress , completed and in-review news 
+
+3 news which are in progress
+
+
+----
+----
+----
+
+logic: it will be very short data, so skipping the classification.
+
+
+news which are in progress,
+
+news which are completed
+
+news which may be pending for review 
+
+8-10 editors,
+
+2-3 editor in each shift
+
+if the news is perfect, they take
+
+sometimes, we need to take the permission  on news
+
+
+A person can complete two stories in education and two stories in culture in the same month
+
+We are not giving source type in third, only category (in category)
+
+
+
+freelancer 1,2,3
+news agency 1,2,3
+
+
