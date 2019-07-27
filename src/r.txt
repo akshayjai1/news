@@ -1,3 +1,14 @@
+navigations
+1. dashboard
+2. all news
+3. news agency - one, two, three
+4. freelancer - one , two, three,
+5. ona team
+6. government
+7. inbox
+8. sent items
+9. chat
+
 state of news
 1. new
 2. in progress
