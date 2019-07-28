@@ -37,25 +37,27 @@ const SourceLegendData = [
 ];
 const EditorSourceScoreGraph = () => {
   return (
-    <div className="jr-card col-lg-6 col-md-12 col-sm-12">
-      <div className="jr-card-header d-flex align-items-center">
-        <h3 className="mb-0">
-          {" "}
-          <IntlMessages id="your_news_source_statistics" />
-        </h3>
+    <div className="col-lg-6 col-md-12 col-sm-12">
+      <div className="jr-card ">
+        <div className="jr-card-header d-flex align-items-center p-3">
+          <h3 className="mb-0">
+            {" "}
+            <IntlMessages id="your_news_source_statistics" />
+          </h3>
 
-        <div className="ml-auto">
-          <span className="badge bg-green text-white">Live Update</span>
+          <div className="ml-auto">
+            <span className="badge bg-green text-white">Live Update</span>
+          </div>
         </div>
-      </div>
 
-      <div className="row mb-4">
-        {SourceLegendData.map(e => (
-          <Legend name={e.name} key={e.name} color={e.color} />
-        ))}
-      </div>
+        <div className="row mb-4">
+          {SourceLegendData.map(e => (
+            <Legend name={e.name} key={e.name} color={e.color} />
+          ))}
+        </div>
 
-      <SiteTrafficChart height={100} />
+        <SiteTrafficChart height={100} />
+      </div>
     </div>
   );
 };

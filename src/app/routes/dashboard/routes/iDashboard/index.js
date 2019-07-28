@@ -5,6 +5,9 @@ import ContainerHeader from "components/ContainerHeader/index";
 import EditorSourceScoreGraph from "./EditorSourceScoreGraph";
 import EditorCategoryScoreGraph from "./EditorCategoryScoreGraph";
 import NewNewsScore from "./NewNewsScore";
+import SourceBar from "./SourceBar";
+import CategoryBar from "./CategoryBar";
+import CardBox from "components/CardBox";
 
 export const iDashboard = props => {
   return (
@@ -18,6 +21,14 @@ export const iDashboard = props => {
         <div class="row">
           <EditorSourceScoreGraph />
           <EditorCategoryScoreGraph />
+        </div>
+        <div class="row">
+          <CardBox heading="Source Statistics">
+            <SourceBar />
+          </CardBox>{" "}
+          <CardBox heading="Category Statistics">
+            <CategoryBar />
+          </CardBox>
         </div>
         {/* <div className="col-lg-6 col-sm-6 col-12">
           <ReportBox
