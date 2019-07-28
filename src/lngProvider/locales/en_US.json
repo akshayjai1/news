@@ -608,5 +608,7 @@
   "signUp.alreadyMember": "I am already a member",
 
 
-  "totalnews": "Total News"
+  "totalnews": "Total News",
+  "your_news_source_statistics": "Your News Source Statistics",
+  "your_news_category_statistics": "Your News Category Statistics"
 }

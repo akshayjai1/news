@@ -38,7 +38,7 @@ const EditorCategoryScoreGraph = () => {
       <div className="jr-card-header d-flex align-items-center">
         <h3 className="mb-0">
           {" "}
-          <IntlMessages id="mynewsstatistics" />
+          <IntlMessages id="your_news_category_statistics" />
         </h3>
 
         <div className="ml-auto">
