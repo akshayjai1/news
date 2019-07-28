@@ -27,7 +27,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-plus text-green" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.newsagency" />
+            <IntlMessages id="newsagency" />
           </span>
         </div>
         <div className="col-2">
@@ -35,7 +35,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-repeat-one text-red" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.freelancer" />
+            <IntlMessages id="freelancer" />
           </span>
         </div>
         <div className="col-2">
@@ -43,7 +43,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-star text-primary" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.onateam" />
+            <IntlMessages id="onateam" />
           </span>
         </div>
         <div className="col-2">
@@ -51,7 +51,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-share text-red zmdi-hc-lg" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.government" />
+            <IntlMessages id="government" />
           </span>
         </div>
         <div className="col-2">
@@ -59,7 +59,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-star text-primary" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.onateam" />
+            <IntlMessages id="onateam" />
           </span>
         </div>
         <div className="col-2">
@@ -67,7 +67,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-share text-red" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.government" />
+            <IntlMessages id="government" />
           </span>
         </div>
         <div className="col-2">
@@ -75,7 +75,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-plus text-green" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.newsagency" />
+            <IntlMessages id="newsagency" />
           </span>
         </div>
         <div className="col-2">
@@ -83,7 +83,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-repeat-one text-red" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.freelancer" />
+            <IntlMessages id="freelancer" />
           </span>
         </div>
         <div className="col-2">
@@ -91,7 +91,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-star text-primary" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.onateam" />
+            <IntlMessages id="onateam" />
           </span>
         </div>
         <div className="col-2">
@@ -99,7 +99,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-share text-red" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.government" />
+            <IntlMessages id="government" />
           </span>
         </div>
         <div className="col-2">
@@ -107,7 +107,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-star text-primary" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.onateam" />
+            <IntlMessages id="onateam" />
           </span>
         </div>
         <div className="col-2">
@@ -115,7 +115,7 @@ const SiteTraffic = () => {
             <i className="zmdi zmdi-share text-red" />
           </IconButton>
           <span>
-            <IntlMessages id="sidebar.dashboard.government" />
+            <IntlMessages id="government" />
           </span>
         </div>
       </div>

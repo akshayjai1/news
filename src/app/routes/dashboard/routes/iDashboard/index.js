@@ -6,6 +6,7 @@ import YearlyProfitChart from "components/dashboard/eCommerce/YearlyProfitChart"
 import ReportBox from "components/ReportBox/index";
 import ContainerHeader from "components/ContainerHeader/index";
 import EditorScoreGraph from "./EditorScoreGraph";
+import NewsStatusScore from "./NewsStatusScore";
 
 export const iDashboard = props => {
   return (
@@ -22,7 +23,7 @@ export const iDashboard = props => {
               styleName="bg-primary text-white p-3"
               price="85K+"
               icon="group-work"
-              detail={<IntlMessages id="sidebar.dashboard.newsagency" />}
+              detail={<IntlMessages id="newsagency" />}
               subHeadingColor="text-white"
             >
               <ResponsiveContainer width="100%" height={100}>
@@ -46,7 +47,7 @@ export const iDashboard = props => {
               styleName="bg-cyan text-white p-3"
               icon="account-o"
               price="526"
-              detail={<IntlMessages id="sidebar.dashboard.freelancer" />}
+              detail={<IntlMessages id="freelancer" />}
               subHeadingColor="text-white"
             >
               <YearlyProfitChart
@@ -68,7 +69,7 @@ export const iDashboard = props => {
               styleName="bg-pink text-white p-3"
               icon="account-box-phone"
               price="232"
-              detail={<IntlMessages id="sidebar.dashboard.onateam" />}
+              detail={<IntlMessages id="onateam" />}
               subHeadingColor="text-white"
             >
               <YearlyProfitChart
@@ -90,7 +91,7 @@ export const iDashboard = props => {
               styleName="bg-orange text-white p-3"
               icon="city-alt"
               price="756+"
-              detail={<IntlMessages id="sidebar.dashboard.government" />}
+              detail={<IntlMessages id="government" />}
               subHeadingColor="text-white"
             >
               <YearlyProfitChart
@@ -108,6 +109,27 @@ export const iDashboard = props => {
           </div>
         </div>
         <EditorScoreGraph />
+        {/* <div className="col-lg-6 col-sm-6 col-12">
+          <ReportBox
+            styleName="bg-pink text-white p-3"
+            icon="accounts-alt"
+            price="232"
+            detail={<IntlMessages id="dashboard.newAuthors" />}
+            subHeadingColor="text-white"
+          >
+            <NewsStatusScore
+              centerText="1800"
+              height={100}
+              chartType="newsDoughnut"
+              backgroundColor={["#A9204F", "#FFF"]}
+              borderColor={["#A9204F", "#FFF"]}
+              hoverBorderColor={["#A9204F", "#FFF"]}
+              hoverBorderWidth={[2, 2]}
+              textColor="#fff"
+              rotation={50}
+            />
+          </ReportBox>
+        </div> */}
       </div>
     </div>
   );

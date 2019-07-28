@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Chart, Doughnut } from "react-chartjs-2";
-import "../../../app/routes/dashboard/routes/Misc/test.css";
+import "../Misc/test.css";
 
 class NewsStatusScore extends Component {
   render() {

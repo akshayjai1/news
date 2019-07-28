@@ -1,6 +1,70 @@
 import React from "react";
 import SiteTrafficChart from "components/dashboard/Common/SiteTrafficChart";
 import IntlMessages from "util/IntlMessages";
+
+const Legend = props => {
+  const { color = "bg-primary", name = "onateam" } = props;
+  return (
+    <div className="mr-3">
+      <span
+        className={`size-10 ${color} lighten-1 rounded-circle d-inline-block mr-1`}
+      />
+      <IntlMessages id={name} />
+    </div>
+  );
+};
+const SourceLegendData = [
+  {
+    name: "newsagency",
+    color: "bg-green"
+  },
+  {
+    name: "freelancer",
+    color: "bg-primary"
+  },
+  {
+    name: "onateam",
+    color: "bg-yellow"
+  },
+  {
+    name: "government",
+    color: "bg-orange"
+  },
+  {
+    name: "totalnews",
+    color: "bg-blue"
+  }
+];
+const CategoryLegendData = [
+  {
+    name: "local",
+    color: "bg-green"
+  },
+  {
+    name: "economy",
+    color: "bg-primary"
+  },
+  {
+    name: "policy",
+    color: "bg-yellow"
+  },
+  {
+    name: "sport",
+    color: "bg-orange"
+  },
+  {
+    name: "culture",
+    color: "bg-yellow"
+  },
+  {
+    name: "miscellaneous",
+    color: "bg-orange"
+  },
+  {
+    name: "totalnews",
+    color: "bg-blue"
+  }
+];
 const EditorScoreGraph = () => {
   return (
     <div className="jr-card">
@@ -16,57 +80,40 @@ const EditorScoreGraph = () => {
       </div>
 
       <div className="row mb-4">
+        {SourceLegendData.map(e => (
+          <Legend name={e.name} key={e.name} color={e.color} />
+        ))}
         <div className="mr-3">
           <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.dashboard.newsagency" />
+          <IntlMessages id="culture" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-red lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.dashboard.freelancer" />
+          <IntlMessages id="economy" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.dashboard.onateam" />
-        </div>
-        <div className="mr-3">
-          <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.dashboard.government" />
+          <IntlMessages id="local" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-red lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="totalnews" />
+          <IntlMessages id="miscellaneous" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.culture" />
+          <IntlMessages id="policy" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-red lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.economy" />
+          <IntlMessages id="sport" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.local" />
+          <IntlMessages id="newsagency" />
         </div>
         <div className="mr-3">
           <span className="size-10 bg-red lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.miscellaneous" />
-        </div>
-        <div className="mr-3">
-          <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.policy" />
-        </div>
-        <div className="mr-3">
-          <span className="size-10 bg-red lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.sport" />
-        </div>
-        <div className="mr-3">
-          <span className="size-10 bg-primary lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.dashboard.newsagency" />
-        </div>
-        <div className="mr-3">
-          <span className="size-10 bg-red lighten-1 rounded-circle d-inline-block mr-1" />
-          <IntlMessages id="sidebar.dashboard.freelancer" />
+          <IntlMessages id="freelancer" />
         </div>
       </div>
 

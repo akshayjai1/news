@@ -26,28 +26,28 @@ export const ParentMenu = props => {
         {/* <li>
           <NavLink className="prepend-icon" to="/app/dashboard/listing">
             <span className="nav-text">
-              <IntlMessages id="sidebar.dashboard.newsagency" />
+              <IntlMessages id="newsagency" />
             </span>
           </NavLink>
         </li>
         <li>
           <NavLink className="prepend-icon" to="/app/dashboard/crm">
             <span className="nav-text">
-              <IntlMessages id="sidebar.dashboard.freelancer" />
+              <IntlMessages id="freelancer" />
             </span>
           </NavLink>
         </li>
         <li>
           <NavLink className="prepend-icon" to="/app/dashboard/intranet">
             <span className="nav-text">
-              <IntlMessages id="sidebar.dashboard.onateam" />
+              <IntlMessages id="onateam" />
             </span>
           </NavLink>
         </li>
         <li>
           <NavLink className="prepend-icon" to="/app/dashboard/eCommerce">
             <span className="nav-text text-transform-none">
-              <IntlMessages id="sidebar.dashboard.government" />
+              <IntlMessages id="government" />
             </span>
           </NavLink>
         </li>
