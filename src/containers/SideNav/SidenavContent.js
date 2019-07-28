@@ -34,6 +34,34 @@ const FreelancerChild = [
     nameId: "sidebar.freelancer.three"
   }
 ];
+const OnaChild = [
+  {
+    to: "/app/ona/",
+    nameId: "ona1"
+  },
+  {
+    to: "/app/ona/",
+    nameId: "ona2"
+  },
+  {
+    to: "/app/ona/",
+    nameId: "ona3"
+  }
+];
+const GovernChilds = [
+  {
+    to: "/app/government/",
+    nameId: "government1"
+  },
+  {
+    to: "/app/government/",
+    nameId: "government2"
+  },
+  {
+    to: "/app/government/",
+    nameId: "government3"
+  }
+];
 class SidenavContent extends Component {
   componentDidMount() {
     const { history } = this.props;
@@ -154,15 +182,15 @@ class SidenavContent extends Component {
             parentNameId="sidebar.freelancer"
             parentIcon="account-o"
           />
-          <SingleMenu
-            to="/app/dashboard"
-            nameId="sidebar.onateam"
-            icon="account-box-phone"
+          <ParentMenu
+            childLinks={OnaChild}
+            parentNameId="sidebar.onateam"
+            parentIcon="account-box-phone"
           />
-          <SingleMenu
-            to="/app/dashboard"
-            nameId="sidebar.government"
-            icon="city-alt"
+          <ParentMenu
+            childLinks={GovernChilds}
+            parentNameId="sidebar.government"
+            parentIcon="city-alt"
           />
           <SingleMenu
             to="/app/mail-redux"
