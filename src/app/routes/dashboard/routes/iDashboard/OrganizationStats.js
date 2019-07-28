@@ -129,18 +129,18 @@ const CategoryGauge = props => {
 };
 
 export const salesStatisticData = [
-  { name: "Jan", uv: 9000 },
-  { name: "Feb", uv: 12000 },
-  { name: "Mar", uv: 7000 },
-  { name: "Apr", uv: 12000 },
-  { name: "May", uv: 14000 },
-  { name: "Jun", uv: 18500 },
-  { name: "Jul", uv: 14000 },
-  { name: "Aug", uv: 17000 },
-  { name: "Sep", uv: 15000 },
-  { name: "Oct", uv: 18000 },
-  { name: "Nov", uv: 19500 },
-  { name: "Dec", uv: 16000 }
+  { name: "Jan", news: 9000 },
+  { name: "Feb", news: 12000 },
+  { name: "Mar", news: 7000 },
+  { name: "Apr", news: 12000 },
+  { name: "May", news: 14000 },
+  { name: "Jun", news: 18500 },
+  { name: "Jul", news: 14000 },
+  { name: "Aug", news: 17000 },
+  { name: "Sep", news: 15000 },
+  { name: "Oct", news: 18000 },
+  { name: "Nov", news: 19500 },
+  { name: "Dec", news: 16000 }
 ];
 const statisticsLegendData = [
   {
@@ -224,7 +224,7 @@ const OrganizationStats = () => {
 
               <Area
                 type="monotone"
-                dataKey="uv"
+                dataKey="news"
                 strokeWidth={2}
                 stroke="#6F82E5"
                 fill="url(#salesStatistic)"

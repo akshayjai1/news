@@ -21,9 +21,23 @@ const NewNewsScore = props => {
               centerText="1800"
               height={100}
               chartType="newsDoughnut"
-              backgroundColor={["#A9204F", "#FFF"]}
-              borderColor={["#A9204F", "#FFF"]}
-              hoverBorderColor={["#A9204F", "#FFF"]}
+              backgroundColor={[
+                "#A9204F",
+                "#FFF",
+                "#adf",
+                "#09f",
+                "#9af",
+                "#f00"
+              ]}
+              borderColor={["#A9204F", "#FFF", "#adf", "#09f", "#9af", "#f00"]}
+              hoverBorderColor={[
+                "#A9204F",
+                "#FFF",
+                "#adf",
+                "#09f",
+                "#9af",
+                "#f00"
+              ]}
               hoverBorderWidth={[2, 2]}
               textColor="#fff"
               rotation={50}
@@ -44,9 +58,23 @@ const NewNewsScore = props => {
             centerText="1800"
             height={100}
             chartType="newsDoughnut"
-            backgroundColor={["#A9204F", "#FFF"]}
-            borderColor={["#A9204F", "#FFF"]}
-            hoverBorderColor={["#A9204F", "#FFF"]}
+            backgroundColor={[
+              "#A9204F",
+              "#FFF",
+              "#adf",
+              "#09f",
+              "#9af",
+              "#f00"
+            ]}
+            borderColor={["#A9204F", "#FFF", "#adf", "#09f", "#9af", "#f00"]}
+            hoverBorderColor={[
+              "#A9204F",
+              "#FFF",
+              "#adf",
+              "#09f",
+              "#9af",
+              "#f00"
+            ]}
             hoverBorderWidth={[2, 2]}
             textColor="#fff"
             rotation={50}
@@ -66,9 +94,23 @@ const NewNewsScore = props => {
             centerText="1800"
             height={100}
             chartType="newsDoughnut"
-            backgroundColor={["#A9204F", "#FFF"]}
-            borderColor={["#A9204F", "#FFF"]}
-            hoverBorderColor={["#A9204F", "#FFF"]}
+            backgroundColor={[
+              "#A9204F",
+              "#FFF",
+              "#adf",
+              "#09f",
+              "#9af",
+              "#f00"
+            ]}
+            borderColor={["#A9204F", "#FFF", "#adf", "#09f", "#9af", "#f00"]}
+            hoverBorderColor={[
+              "#A9204F",
+              "#FFF",
+              "#adf",
+              "#09f",
+              "#9af",
+              "#f00"
+            ]}
             hoverBorderWidth={[2, 2]}
             textColor="#fff"
             rotation={50}
@@ -88,9 +130,23 @@ const NewNewsScore = props => {
             centerText="1800"
             height={100}
             chartType="newsDoughnut"
-            backgroundColor={["#A9204F", "#FFF"]}
-            borderColor={["#A9204F", "#FFF"]}
-            hoverBorderColor={["#A9204F", "#FFF"]}
+            backgroundColor={[
+              "#A9204F",
+              "#FFF",
+              "#adf",
+              "#09f",
+              "#9af",
+              "#f00"
+            ]}
+            borderColor={["#A9204F", "#FFF", "#adf", "#09f", "#9af", "#f00"]}
+            hoverBorderColor={[
+              "#A9204F",
+              "#FFF",
+              "#adf",
+              "#09f",
+              "#9af",
+              "#f00"
+            ]}
             hoverBorderWidth={[2, 2]}
             textColor="#fff"
             rotation={50}

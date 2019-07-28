@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
-import {Chart, Doughnut} from 'react-chartjs-2';
-import '../../../app/routes/dashboard/routes/Misc/test.css'
+import React, { Component } from "react";
+import { Chart, Doughnut } from "react-chartjs-2";
+import "../../../app/routes/dashboard/routes/Misc/test.css";
 
 class YearlyProfitChart extends Component {
-
   render() {
-
     const {
       shadowColor,
       centerText,
@@ -19,10 +17,10 @@ class YearlyProfitChart extends Component {
       chartType
     } = this.props;
 
-    const data = (canvas) => {
+    const data = canvas => {
       const ctx = canvas.getContext("2d");
       const _stroke = ctx.stroke;
-      ctx.stroke = function () {
+      ctx.stroke = function() {
         ctx.save();
         ctx.shadowColor = shadowColor;
         ctx.shadowBlur = 20;
@@ -33,8 +31,7 @@ class YearlyProfitChart extends Component {
       };
 
       Chart.pluginService.register({
-
-        beforeDraw: function (chart) {
+        beforeDraw: function(chart) {
           if (chart.options.chartType === chartType) {
             let width = chart.chart.width,
               height = chart.chart.height,
@@ -57,19 +54,24 @@ class YearlyProfitChart extends Component {
 
       return {
         labels: [
-          'red',
-          'sky',
+          "Local",
+          "Economics",
+          "Policy",
+          "Sports",
+          "Culture",
+          "Miscellaneous"
         ],
-        datasets: [{
-          data: [100, 300],
-          backgroundColor: backgroundColor,
-          borderColor: borderColor,
-          hoverBorderColor: hoverBorderColor,
-          hoverBorderWidth: hoverBorderWidth
-        }],
-      }
-    }
-
+        datasets: [
+          {
+            data: [100, 20, 50, 120, 60, 90],
+            backgroundColor: backgroundColor,
+            borderColor: borderColor,
+            hoverBorderColor: hoverBorderColor,
+            hoverBorderWidth: hoverBorderWidth
+          }
+        ]
+      };
+    };
 
     const options = {
       maintainAspectRatio: false,
@@ -77,7 +79,7 @@ class YearlyProfitChart extends Component {
       legend: {
         display: false,
         labels: {
-          fontColor: '#AAAEB3'
+          fontColor: "#AAAEB3"
         }
       },
       layout: {
@@ -85,16 +87,14 @@ class YearlyProfitChart extends Component {
           top: 5,
           bottom: 5,
           right: 0,
-          left: 0,
+          left: 0
         }
       },
       cutoutPercentage: 75,
       borderWidth: 0,
-      rotation: (-0.5 * Math.PI) - (25 / rotation * Math.PI)
+      rotation: -0.5 * Math.PI - (25 / rotation) * Math.PI
     };
-    return (
-      <Doughnut data={data} options={options} height={height}/>
-    );
+    return <Doughnut data={data} options={options} height={height} />;
   }
 }
 
