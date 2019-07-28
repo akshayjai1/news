@@ -9,7 +9,6 @@ import {
   XAxis,
   YAxis
 } from "recharts";
-import IntlMessages from "util/IntlMessages";
 
 const sourceData = [
   {

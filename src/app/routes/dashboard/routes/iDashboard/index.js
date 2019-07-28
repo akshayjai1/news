@@ -8,6 +8,7 @@ import NewNewsScore from "./NewNewsScore";
 import SourceBar from "./SourceBar";
 import CategoryBar from "./CategoryBar";
 import CardBox from "components/CardBox";
+import OrganizationStats from "./OrganizationStats";
 
 export const iDashboard = props => {
   return (
@@ -18,11 +19,11 @@ export const iDashboard = props => {
           title={<IntlMessages id="sidebar.dashboard.news" />}
         />
         <NewNewsScore />
-        <div class="row">
+        <div className="row">
           <EditorSourceScoreGraph />
           <EditorCategoryScoreGraph />
         </div>
-        <div class="row">
+        <div className="row">
           <CardBox heading="Source Statistics">
             <SourceBar />
           </CardBox>{" "}
@@ -30,6 +31,7 @@ export const iDashboard = props => {
             <CategoryBar />
           </CardBox>
         </div>
+        <OrganizationStats />
         {/* <div className="col-lg-6 col-sm-6 col-12">
           <ReportBox
             styleName="bg-pink text-white p-3"
