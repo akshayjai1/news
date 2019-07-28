@@ -9,6 +9,14 @@ navigations
 8. sent items
 9. chat
 
+categories:
+Culture
+Economy
+Local
+miscellaneous
+Policy
+Sport
+
 state of news
 1. new
 2. in progress
@@ -58,5 +66,24 @@ We are not giving source type in third, only category (in category)
 
 freelancer 1,2,3
 news agency 1,2,3
+
+in the third row
+
+we want to show whole organization
+yearly data
+bar gra
+
+1. total news
+2. average monthly
+3.
+
+ yearly new complete for the line chart
+numbers will be 6 categories and 7 th will be total in the third row
+
+the circle chart is showing percentage of the categories
+
+maintain the order
+
+https://zavoloklom.github.io/material-design-iconic-font/icons.html#directional
 
 

@@ -5,6 +5,7 @@ import IntlMessages from "util/IntlMessages";
 import YearlyProfitChart from "components/dashboard/eCommerce/YearlyProfitChart";
 import ReportBox from "components/ReportBox/index";
 import ContainerHeader from "components/ContainerHeader/index";
+import EditorScoreGraph from "./EditorScoreGraph";
 
 export const iDashboard = props => {
   return (
@@ -106,6 +107,7 @@ export const iDashboard = props => {
             </ReportBox>
           </div>
         </div>
+        <EditorScoreGraph />
       </div>
     </div>
   );
