@@ -28,7 +28,7 @@ const INIT_STATE = {
   selectedSectionId: 1,
   drawerState: false,
   user: {
-    name: 'Robert Johnson',
+    name: 'Ahmed Abri',
     email: 'robert.johnson@example.com',
     avatar: 'https://via.placeholder.com/150x150'
   },

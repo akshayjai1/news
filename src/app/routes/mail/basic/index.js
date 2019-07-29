@@ -451,7 +451,7 @@ class Mail extends Component {
       loader: true,
       currentMail: null,
       user: {
-        name: 'Robert Johnson',
+        name: 'Ahmed Abri',
         email: 'robert@example.com',
         avatar: 'https://via.placeholder.com/150x150'
       },

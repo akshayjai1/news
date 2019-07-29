@@ -47,7 +47,7 @@ const INIT_STATE = {
   allToDos: toDos,
   currentTodo: null,
   user: {
-    name: 'Robert Johnson',
+    name: 'Ahmed Abri',
     email: 'robert.johnson@example.com',
     avatar: 'https://via.placeholder.com/150x150'
   },

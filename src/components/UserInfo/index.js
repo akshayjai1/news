@@ -30,7 +30,7 @@ class UserInfo extends React.Component {
         />
         <div className="user-detail">
           <h4 className="user-name" onClick={this.handleClick}>
-            Robert Johnson{" "}
+            Ahmed Abri{" "}
             <i className="zmdi zmdi-caret-down zmdi-hc-fw align-middle" />
           </h4>
         </div>

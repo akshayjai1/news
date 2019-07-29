@@ -115,7 +115,7 @@ class ChatPanel extends Component {
                  className="avatar avatar-shadow rounded-circle size-60 huge" alt="John Doe"/>
           </div>
 
-          <div className="user-name h4 my-2">Robert Johnson</div>
+          <div className="user-name h4 my-2">Ahmed Abri</div>
 
         </div>
       </div>
@@ -167,7 +167,7 @@ class ChatPanel extends Component {
 
           <div className="module-user-info d-flex flex-column justify-content-center">
             <div className="module-title">
-              <h5 className="mb-0">Robert Johnson</h5>
+              <h5 className="mb-0">Ahmed Abri</h5>
             </div>
             <div className="module-user-detail">
               <span className="jr-link text-grey">robert@example.com</span>
