@@ -1,4 +1,6 @@
 {
+  "all": "All",
+  "allnews": "All News",
   "appModule.signin": "Sign In",
   "appModule.signup": "Sign Up",
   "appModule.forgotPassword": "Forgot your password?",
@@ -281,7 +283,7 @@
   "ona3": "ONA 3",
   "sidebar.main": "Main",
   "sidebar.dashboard": "Dashboard",
-  "sidebar.allnews": "All News",
+
   "sidebar.chat": "Chat",
   "sidebar.dashboard.misc": "Misc",
   "sidebar.dashboard.allnews": "All News",

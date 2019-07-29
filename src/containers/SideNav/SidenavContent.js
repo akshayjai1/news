@@ -171,7 +171,7 @@ class SidenavContent extends Component {
             nameId="sidebar.dashboard"
             icon="view-dashboard"
           />
-          <SingleMenu to="/app/dashboard" nameId="sidebar.allnews" icon="rss" />
+          <SingleMenu to="/app/allnews" nameId="allnews" icon="rss" />
           <ParentMenu
             childLinks={AgencyChild}
             parentNameId="sidebar.newsagency"

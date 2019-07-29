@@ -36,6 +36,7 @@ import asyncComponent from "../util/asyncComponent";
 import TopNav from "components/TopNav";
 import SocialApps from "./routes/socialApps";
 import { iDashboard } from "./routes/dashboard/routes/iDashboard";
+import AllNews from "./routes/dashboard/routes/AllNews/AllNews";
 
 class App extends React.Component {
   render() {
@@ -84,6 +85,7 @@ class App extends React.Component {
             <div className="app-main-content">
               <Switch>
                 <Route path={`${match.url}/dashboard`} component={iDashboard} />
+                <Route path={`${match.url}/allnews`} component={AllNews} />
                 <Route
                   path={`${match.url}/social-apps`}
                   component={SocialApps}

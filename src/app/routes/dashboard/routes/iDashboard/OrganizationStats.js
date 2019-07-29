@@ -118,11 +118,11 @@ const CategoryGauge = props => {
 
     // Add cursor
     chart.cursor = new am4charts.RadarCursor();
-    return () => {
-      if (this.chart) {
-        this.chart.dispose();
-      }
-    };
+    // return () => {
+    //   if (this.chart) {
+    //     this.chart.dispose();
+    //   }
+    // };
   }, []);
 
   return <div id="chartdiv" style={{ width: "100%", height: "300px" }} />;
