@@ -3,18 +3,24 @@ import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import classnames from "classnames";
 
 import Widget from "components/Widget/index";
-import { allNews, AgencyNews, OnaNews, FreelanceNews } from "./data";
+import {
+  allNews,
+  AgencyNews,
+  OnaNews,
+  FreelanceNews,
+  GovernmentNews
+} from "./data";
 import NewsItem from "./NewsItem";
 import IntlMessages from "util/IntlMessages";
 import Media from "./Media";
 
-const newsData = [allNews, AgencyNews, OnaNews, FreelanceNews];
+const newsData = [allNews, AgencyNews, OnaNews, FreelanceNews, GovernmentNews];
 
 class AllNews extends React.Component {
   state = {
     activeTab: 0,
     loader: false,
-    nameIdArray: ["all", "newsagency", "freelance", "government"]
+    nameIdArray: ["all", "newsagency", "freelancer", "onateam", "government"]
   };
 
   toggle = tab => {
@@ -93,7 +99,8 @@ class AllNews extends React.Component {
                     allNews,
                     AgencyNews,
                     FreelanceNews,
-                    OnaNews
+                    OnaNews,
+                    GovernmentNews
                   ])}
                 </TabContent>
               </div>

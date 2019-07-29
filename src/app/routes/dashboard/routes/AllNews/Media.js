@@ -7,7 +7,8 @@ import Tab from "@material-ui/core/Tab";
 import IconButton from "@material-ui/core/IconButton";
 import CardLayout from "components/CardLayout/index";
 import CardMenu from "components/dashboard/Common/CardMenu";
-
+import IntlMessages from "util/IntlMessages";
+import gallery from "./galleryData";
 function TabContainer({ children, dir }) {
   return <div dir={dir}>{children}</div>;
 }
@@ -51,8 +52,8 @@ class Media extends Component {
         <div className="jr-card-header mb-3 d-flex align-items-center">
           <div className="mr-auto">
             <h3 className="card-heading mb-0">
-              <i className="zmdi zmdi-notifications-active mr-2" />
-              Latest Notifications
+              <i className="zmdi zmdi-cloud-box mr-2" />
+              <IntlMessages id="latest-media" />
             </h3>
           </div>
           <IconButton
@@ -83,7 +84,19 @@ class Media extends Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}>Images</TabContainer>
+          <TabContainer dir={theme.direction}>
+            <ul className="list-inline thumbnail-list">
+              {gallery.map((image, index) => (
+                <li key={index} className="thumbnail-item">
+                  <div className="grid-thumb-equal">
+                    <span className="grid-thumb-cover jr-link">
+                      <img alt={image.title} src={image.img} />
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </TabContainer>
           <TabContainer dir={theme.direction}>Videos</TabContainer>
         </SwipeableViews>
         <CardMenu
