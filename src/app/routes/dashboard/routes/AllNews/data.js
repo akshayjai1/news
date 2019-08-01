@@ -1,7 +1,7 @@
 export const allNews = [
   {
     id: 1,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-1.jpeg",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -10,7 +10,7 @@ export const allNews = [
   },
   {
     id: 2,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-2.jpeg",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -19,7 +19,7 @@ export const allNews = [
   },
   {
     id: 3,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-3.jpeg",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -30,7 +30,7 @@ export const allNews = [
 export const AgencyNews = [
   {
     id: 4,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-4.jpeg",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -39,7 +39,7 @@ export const AgencyNews = [
   },
   {
     id: 5,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-5.jpeg",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -48,7 +48,7 @@ export const AgencyNews = [
   },
   {
     id: 6,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-6.jpeg",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -59,7 +59,7 @@ export const AgencyNews = [
 export const FreelanceNews = [
   {
     id: 7,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-7.jpeg",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -68,7 +68,7 @@ export const FreelanceNews = [
   },
   {
     id: 8,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-8.jpeg",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -77,7 +77,7 @@ export const FreelanceNews = [
   },
   {
     id: 9,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-9.jpeg",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -88,7 +88,7 @@ export const FreelanceNews = [
 export const OnaNews = [
   {
     id: 10,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-10.jpeg",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -97,7 +97,7 @@ export const OnaNews = [
   },
   {
     id: 11,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-11.jpeg",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -106,7 +106,7 @@ export const OnaNews = [
   },
   {
     id: 12,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-2.jpeg",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -117,7 +117,7 @@ export const OnaNews = [
 export const GovernmentNews = [
   {
     id: 13,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-3.jpeg",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -126,7 +126,7 @@ export const GovernmentNews = [
   },
   {
     id: 14,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-4.jpeg",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
@@ -135,7 +135,7 @@ export const GovernmentNews = [
   },
   {
     id: 15,
-    image: "https://via.placeholder.com/575x480",
+    image: "https://marmelab.com/posters/beard-5.jpeg",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
