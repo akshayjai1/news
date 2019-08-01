@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewsItem({ data }) {
+function NewsItem({ data, onSelect }) {
   const { image, title, subTitle, desc } = data;
   return (
     <div className="jr-news-item">
@@ -8,7 +8,9 @@ function NewsItem({ data }) {
         <img className="rounded-xl" src={image} alt="..." />
       </div>
       <div className="jr-news-content">
-        <h4 className="mt-0">{title}</h4>
+        <h4 className="mt-0" onClick={onSelect}>
+          {title}
+        </h4>
         <p>{subTitle}</p>
         <div className="jr-news-tags-row">
           <div className="jr-news-tags-left">
@@ -20,7 +22,10 @@ function NewsItem({ data }) {
             </p>
           </div>
           <div className="jr-news-tags-right">
-            <p className="text-primary ml-auto pointer text-truncate">
+            <p
+              className="text-primary ml-auto pointer text-truncate"
+              onClick={onSelect}
+            >
               Ready Full Story{" "}
               <i
                 className={`zmdi zmdi-long-arrow-right jr-fs-xxl ml-2 d-inline-block align-middle`}

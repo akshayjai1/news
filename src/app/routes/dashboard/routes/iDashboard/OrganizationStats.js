@@ -173,7 +173,7 @@ const statisticsLegendData = [
   }
 ];
 const StatisticsLegend = props => {
-  const { size = [1, 3, 4], numberValue, text, icon = "calendar" } = props;
+  const { size = [1, 3, 4], numberValue, text /*icon = "calendar"*/ } = props;
   return (
     <div
       className={`col-6 col-sm-${size[2]} col-md-${size[1]} col-lg-${size[0]}`}
