@@ -9,6 +9,7 @@ import CardLayout from "components/CardLayout/index";
 import CardMenu from "components/dashboard/Common/CardMenu";
 import IntlMessages from "util/IntlMessages";
 import gallery from "./galleryData";
+import CustomScrollbars from "util/CustomScrollbars";
 function TabContainer({ children, dir }) {
   return <div dir={dir}>{children}</div>;
 }
@@ -42,6 +43,10 @@ class Media extends Component {
       menuState: false
     };
   }
+
+  onDragStart = (event, url) => {
+    event.dataTransfer.setData("text/uri-list", url);
+  };
 
   render() {
     const { anchorEl, menuState } = this.state;
@@ -85,17 +90,26 @@ class Media extends Component {
           onChangeIndex={this.handleChangeIndex}
         >
           <TabContainer dir={theme.direction}>
+            {/* <CustomScrollbars className="scrollbar" style={{ height: "100%" }}> */}
             <ul className="list-inline thumbnail-list">
               {gallery.map((image, index) => (
-                <li key={index} className="thumbnail-item">
+                <li key={index} className="">
                   <div className="grid-thumb-equal">
                     <span className="grid-thumb-cover jr-link">
-                      <img alt={image.title} src={image.img} />
+                      <img
+                        draggable
+                        alt={image.title}
+                        src={image.img}
+                        onDragStart={e => {
+                          this.onDragStart(e, image.img);
+                        }}
+                      />
                     </span>
                   </div>
                 </li>
               ))}
             </ul>
+            {/* </CustomScrollbars> */}
           </TabContainer>
           <TabContainer dir={theme.direction}>Videos</TabContainer>
         </SwipeableViews>

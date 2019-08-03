@@ -51,11 +51,12 @@ const getTabPanes = (panesData, onSelect) => {
 const Listing = props => {
   const { toggleFn, activeTab, onSelect } = props;
   const nameIdArray = [
-    "all",
-    "newsagency",
-    "freelancer",
-    "onateam",
-    "government"
+    "Local",
+    "Economics",
+    "Policy",
+    "Sports",
+    "Culture",
+    "Miscellaneous"
   ];
 
   return (

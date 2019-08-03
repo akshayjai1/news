@@ -1,27 +1,36 @@
 export const allNews = [
   {
     id: 1,
-    image: "https://marmelab.com/posters/beard-1.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "News Agency, Local"
   },
   {
     id: 2,
-    image: "https://marmelab.com/posters/beard-2.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "Policy, Local, Culture, "
   },
   {
     id: 3,
-    image: "https://marmelab.com/posters/beard-3.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
@@ -30,27 +39,36 @@ export const allNews = [
 export const AgencyNews = [
   {
     id: 4,
-    image: "https://marmelab.com/posters/beard-4.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 5,
-    image: "https://marmelab.com/posters/beard-5.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 6,
-    image: "https://marmelab.com/posters/beard-6.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
@@ -59,27 +77,37 @@ export const AgencyNews = [
 export const FreelanceNews = [
   {
     id: 7,
-    image: "https://marmelab.com/posters/beard-7.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 8,
-    image: "https://marmelab.com/posters/beard-8.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 9,
-    image: "https://marmelab.com/posters/beard-9.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
@@ -88,27 +116,37 @@ export const FreelanceNews = [
 export const OnaNews = [
   {
     id: 10,
-    image: "https://marmelab.com/posters/beard-10.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 11,
-    image: "https://marmelab.com/posters/beard-11.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 12,
-    image: "https://marmelab.com/posters/beard-2.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
@@ -117,27 +155,35 @@ export const OnaNews = [
 export const GovernmentNews = [
   {
     id: 13,
-    image: "https://marmelab.com/posters/beard-3.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Getting started with cryptocurrency - what is blockchain",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 14,
-    image: "https://marmelab.com/posters/beard-4.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "Is cryptocurrency investment a trap or opportunity?",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"
   },
   {
     id: 15,
-    image: "https://marmelab.com/posters/beard-5.jpeg",
+    image: "https://via.placeholder.com/575x480",
     title: "10 things you must know before trading in cryptocurrency",
     subTitle:
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
+      "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
     desc: "Policy, Local, Culture, Economics, Sports"

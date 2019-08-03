@@ -10,6 +10,7 @@
     "@material-ui/core": "^4.0.2",
     "@material-ui/icons": "^4.0.1",
     "@material-ui/styles": "^4.0.2",
+    "@toast-ui/react-image-editor": "^1.0.1",
     "array-move": "^2.1.0",
     "autosuggest-highlight": "^3.1.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -80,6 +81,7 @@
     "redux-saga": "^1.0.2",
     "save": "^2.4.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^4.3.2",
     "typeface-roboto": "^0.0.54",
     "url-search-params": "^1.1.0"
   },

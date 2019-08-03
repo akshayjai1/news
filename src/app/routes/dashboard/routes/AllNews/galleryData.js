@@ -1,28 +1,29 @@
 const galleryData = [
   {
-    img: "https://via.placeholder.com/500x330",
+    img: "https://marmelab.com/posters/beard-13.jpeg",
     title: "Breakfast"
   },
 
   {
-    img: "https://via.placeholder.com/500x330",
+    img: "https://marmelab.com/posters/beard-3.jpeg",
     title: "Honey"
   },
+
   {
-    img: "https://via.placeholder.com/500x350",
+    img: "https://marmelab.com/posters/beard-2.jpeg",
     title: "Vegetables"
   },
 
   {
-    img: "https://via.placeholder.com/500x375",
+    img: "https://marmelab.com/posters/beard-4.jpeg",
     title: "Olive oil"
   },
   {
-    img: "https://via.placeholder.com/500x330",
+    img: "https://marmelab.com/posters/beard-5.jpeg",
     title: "Blue Bird"
   },
   {
-    img: "https://via.placeholder.com/500x330",
+    img: "https://marmelab.com/posters/beard-6.jpeg",
     title: "Morning"
   }
 ];

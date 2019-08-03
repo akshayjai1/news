@@ -1,28 +1,71 @@
 import React from "react";
+import styled from "styled-components";
+import "tui-image-editor/dist/tui-image-editor.css";
+import ImageEditor from "@toast-ui/react-image-editor";
 import Button from "@material-ui/core/Button";
 import IntlMessages from "util/IntlMessages";
 
+const ImageArea = styled.div`
+  border: 2px dashed #a9f;
+  width: 100%;
+  height: 300px;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 const NewsDetailPage = props => {
+  const handleDrop = (event, index, boardName) => {
+    if (event.dataTransfer && event.dataTransfer.getData("URL").length > 0) {
+      setImageUrl(event.dataTransfer.getData("URL"));
+    }
+  };
   const imageStyle = {
     width: "100%",
     height: "auto"
   };
+  const [imageUrl, setImageUrl] = React.useState("");
   const { image, title, subTitle, desc } = props.data;
   return (
     <div className="">
       <h3 className="mt-0">{title}</h3>
-      <img style={imageStyle} src={image} alt="..." />
+      {imageUrl.length === 0 ? (
+        <ImageArea
+          onDragOver={e => e.preventDefault()}
+          onDrop={e => handleDrop(e)}
+        >
+          Please drag image from right panel to attach
+        </ImageArea>
+      ) : (
+        <ImageEditor
+          includeUI={{
+            loadImage: {
+              path: imageUrl,
+              name: "SampleImage"
+            },
+            theme: {},
+            menu: ["shape", "filter"],
+            initMenu: "filter",
+            uiSize: {
+              width: "100%",
+              height: "700px"
+            },
+            menuBarPosition: "bottom"
+          }}
+          cssMaxHeight={500}
+          cssMaxWidth={700}
+          selectionStyle={{
+            cornerSize: 20,
+            rotatingPointOffset: 70
+          }}
+          usageStatistics={true}
+        />
+      )}
+      {/* <img style={imageStyle} src={image} alt="..." /> */}
       <br />
       <br />
       <div>
-        <p>{subTitle}</p>
-        <br />
-        <p>{subTitle}</p>
-        <br />
-        <p>{subTitle}</p>
-        <br />
-        <p>{subTitle}</p>
-        <br />
         <p>{subTitle}</p>
         <br />
         <br />
