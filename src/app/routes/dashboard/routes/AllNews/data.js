@@ -9,7 +9,7 @@ export const allNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "News Agency, Local"
+    desc: "News Agency > News Agency 1"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const allNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, "
+    desc: "Government > Government 1 "
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const allNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "Government > Government 2"
   }
 ];
 export const AgencyNews = [
@@ -47,7 +47,7 @@ export const AgencyNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "INA Team > INA Team 1"
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ export const AgencyNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "News Agency > News Agency 2"
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ export const AgencyNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "Government > Government 2"
   }
 ];
 export const FreelanceNews = [
@@ -86,7 +86,7 @@ export const FreelanceNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "News Agency > News Agency 3"
   },
   {
     id: 8,
@@ -98,7 +98,7 @@ export const FreelanceNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "INA Team > INA Team 2"
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ export const FreelanceNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "News Agency > News Agency 1"
   }
 ];
 export const OnaNews = [
@@ -124,7 +124,7 @@ export const OnaNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "News Agency > News Agency 1"
   },
   {
     id: 11,
@@ -137,7 +137,7 @@ export const OnaNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "Government > Government 3"
   },
   {
     id: 12,
@@ -149,7 +149,7 @@ export const OnaNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "INA Team > INA Team 2"
   }
 ];
 export const GovernmentNews = [
@@ -162,7 +162,7 @@ export const GovernmentNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "INA Team > INA Team 1"
   },
   {
     id: 14,
@@ -174,7 +174,7 @@ export const GovernmentNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "Government > Government 2"
   },
   {
     id: 15,
@@ -186,6 +186,6 @@ export const GovernmentNews = [
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar\n" +
       "felis pharetra in vestibulum sed.",
-    desc: "Policy, Local, Culture, Economics, Sports"
+    desc: "Government > Government 3"
   }
 ];

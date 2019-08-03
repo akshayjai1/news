@@ -27,5 +27,14 @@ const galleryData = [
     title: "Morning"
   }
 ];
+export const videoUrls = [
+  "https://www.youtube.com/embed/ikdl9qE6D98",
+  "https://www.youtube.com/watch?v=wnzXsfvgf54",
+  "https://www.youtube.com/watch?v=7Lc_dlVrg5M",
+  "https://www.youtube.com/watch?v=yZs4PqKlph0",
+  "https://www.youtube.com/watch?v=Pl8OlkkwRpc",
+  "https://www.youtube.com/watch?v=FWu2rkffYvg",
+  "https://www.youtube.com/watch?v=Xn7KWR9EOGQ"
+];
 
 export default galleryData;

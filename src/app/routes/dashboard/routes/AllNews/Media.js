@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CardLayout from "components/CardLayout/index";
 import CardMenu from "components/dashboard/Common/CardMenu";
 import IntlMessages from "util/IntlMessages";
-import gallery from "./galleryData";
+import gallery, { videoUrls } from "./galleryData";
 import CustomScrollbars from "util/CustomScrollbars";
 function TabContainer({ children, dir }) {
   return <div dir={dir}>{children}</div>;
@@ -88,6 +88,7 @@ class Media extends Component {
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
+          style={{ height: "600px", "overflow-y": "scroll" }}
         >
           <TabContainer dir={theme.direction}>
             {/* <CustomScrollbars className="scrollbar" style={{ height: "100%" }}> */}
@@ -111,7 +112,18 @@ class Media extends Component {
             </ul>
             {/* </CustomScrollbars> */}
           </TabContainer>
-          <TabContainer dir={theme.direction}>Videos</TabContainer>
+          <TabContainer dir={theme.direction}>
+            {videoUrls.map(e => (
+              <iframe
+                width="260"
+                height="215"
+                src={e + "?autoplay=0"}
+                key={e}
+                frameborder="0"
+                autoPlay={1}
+              ></iframe>
+            ))}
+          </TabContainer>
         </SwipeableViews>
         <CardMenu
           menuState={menuState}

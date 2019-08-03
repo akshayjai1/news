@@ -39,6 +39,8 @@ const NewsDetailPage = props => {
         </ImageArea>
       ) : (
         <ImageEditor
+          onDragOver={e => e.preventDefault()}
+          onDrop={e => handleDrop(e)}
           includeUI={{
             loadImage: {
               path: imageUrl,
