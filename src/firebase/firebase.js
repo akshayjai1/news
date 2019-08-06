@@ -1,13 +1,13 @@
-import firebase from 'firebase'
+import firebase from "firebase";
 
 // Initialize Firebase
 const config = {
-  apiKey: 'AIzaSyCYaTKjfam_qMXDnGfcdnBxScEq89VQtLk',
-  authDomain: 'curious-sandbox-196209.firebaseapp.com',
-  databaseURL: 'https://curious-sandbox-196209.firebaseio.com',
-  projectId: 'curious-sandbox-196209',
-  storageBucket: '',
-  messagingSenderId: '1034032747860'
+  apiKey: "AIzaSyCuqsqYezbIR3yw46bgVvBtAxJ708k9vTE",
+  authDomain: "alpha-178509.firebaseapp.com",
+  databaseURL: "https://alpha-178509.firebaseio.com",
+  projectId: "alpha-178509",
+  storageBucket: "",
+  messagingSenderId: "1034032747860"
 };
 
 firebase.initializeApp(config);

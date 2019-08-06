@@ -120,7 +120,7 @@ class Media extends Component {
                 src={e + "?autoplay=0"}
                 key={e}
                 frameborder="0"
-                autoPlay={1}
+                autoPlay={0}
               ></iframe>
             ))}
           </TabContainer>

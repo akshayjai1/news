@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import IntlMessages from "util/IntlMessages";
 
 const ListHeading = props => {
-  const { headingId = "allnews" } = props;
+  const { headingId = "allnews", raw } = props;
   return (
     <div className="d-flex flex-row justify-content-between mb-2">
       <h4 className="mr-2">
-        <IntlMessages id={headingId} />
+        {raw.length > 0 ? raw : <IntlMessages id={headingId} />}
       </h4>
 
       <span className="ml-2 pointer">

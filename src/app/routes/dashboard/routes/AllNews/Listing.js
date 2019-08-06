@@ -62,7 +62,7 @@ const Listing = props => {
   return (
     <div className="jr-news-action jr-tabs-classic jr-tabs-classic-no-border">
       <div className="jr-tabs-up jr-tabs-up-no-border">
-        <Nav className="jr-tabs-pills-ctr" pills>
+        <Nav className="jr-tabs-pills-ctr" pills style={{ marginLeft: "70px" }}>
           {getTabsHandles(nameIdArray, activeTab, toggleFn)}
         </Nav>
       </div>

@@ -25,13 +25,17 @@ class AllNews extends React.Component {
     this.setState({ currentNews: news });
   };
   render() {
+    console.log("this props.", this.props);
     return (
       <div className="app-wrapper">
         <div className="row">
           <div className="col-lg-8">
             {this.state.currentNews === null ? (
               <Widget>
-                <ListHeading headingId="allnews" />
+                <ListHeading
+                  headingId="allnews"
+                  raw={this.props.location.pathname.replace("/app/", "")}
+                />
                 <Listing
                   toggleFn={this.toggle}
                   activeTab={this.state.activeTab}

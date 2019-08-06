@@ -10,12 +10,12 @@ navigations
 9. chat
 
 categories:
-Culture
-Economy
 Local
-miscellaneous
+Economy
 Policy
 Sport
+Culture
+miscellaneous
 
 state of news
 1. new
@@ -92,5 +92,4 @@ http://localhost:3001/app/dashboard/listing
 
 for image panel
 http://localhost:3001/app/dashboard/misc
-
 

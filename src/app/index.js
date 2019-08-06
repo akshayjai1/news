@@ -87,6 +87,54 @@ class App extends React.Component {
                 <Route path={`${match.url}/dashboard`} component={iDashboard} />
                 <Route path={`${match.url}/allnews`} component={AllNews} />
                 <Route
+                  path={`${match.url}/newsagency/news-agency-1`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/newsagency/news-agency-2`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/newsagency/news-agency-3`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/government/government-1`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/government/government-2`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/government/government-3`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/onateam/onateam-1`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/onateam/onateam-2`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/onateam/onateam-3`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/freelancers/freelancer-1`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/freelancers/freelancer-2`}
+                  component={AllNews}
+                />
+                <Route
+                  path={`${match.url}/freelancers/freelancer-3`}
+                  component={AllNews}
+                />
+                <Route
                   path={`${match.url}/social-apps`}
                   component={SocialApps}
                 />

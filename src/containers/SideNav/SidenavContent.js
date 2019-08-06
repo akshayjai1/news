@@ -8,57 +8,57 @@ import { ParentMenu } from "./ParentMenu";
 
 const AgencyChild = [
   {
-    to: "/app/newsagency",
+    to: "/app/newsagency/news-agency-1",
     nameId: "sidebar.newsagency.one"
   },
   {
-    to: "/app/dashboard/listing",
+    to: "/app/newsagency/news-agency-2",
     nameId: "sidebar.newsagency.two"
   },
   {
-    to: "/app/dashboard/listing",
+    to: "/app/newsagency/news-agency-3",
     nameId: "sidebar.newsagency.three"
   }
 ];
 const FreelancerChild = [
   {
-    to: "/app/freelancer",
+    to: "/app/freelancers/freelancer-1",
     nameId: "sidebar.freelancer.one"
   },
   {
-    to: "/app/freelancer",
+    to: "/app/freelancers/freelancer-2",
     nameId: "sidebar.freelancer.two"
   },
   {
-    to: "/app/freelancer",
+    to: "/app/freelancers/freelancer-3",
     nameId: "sidebar.freelancer.three"
   }
 ];
 const OnaChild = [
   {
-    to: "/app/ona/",
+    to: "/app/onateam/onateam-1",
     nameId: "ona1"
   },
   {
-    to: "/app/ona/",
+    to: "/app/onateam/onateam-2",
     nameId: "ona2"
   },
   {
-    to: "/app/ona/",
+    to: "/app/onateam/onateam-3",
     nameId: "ona3"
   }
 ];
 const GovernChilds = [
   {
-    to: "/app/government/",
+    to: "/app/government/government-1",
     nameId: "government1"
   },
   {
-    to: "/app/government/",
+    to: "/app/government/government-2",
     nameId: "government2"
   },
   {
-    to: "/app/government/",
+    to: "/app/government/government-3",
     nameId: "government3"
   }
 ];
@@ -192,21 +192,13 @@ class SidenavContent extends Component {
             parentNameId="sidebar.government"
             parentIcon="city-alt"
           />
-          <SingleMenu
-            to="/app/mail-redux"
-            nameId="sidebar.inbox"
-            icon="email"
-          />
-          <SingleMenu
+          <SingleMenu to="/app/mail-redux" nameId="newsbox" icon="email" />
+          {/* <SingleMenu
             to="/app/dashboard"
             nameId="sidebar.sentitems"
             icon="arrow-right-top"
-          />
-          <SingleMenu
-            to="/app/dashboard"
-            nameId="sidebar.chat"
-            icon="comment"
-          />
+          /> */}
+          <SingleMenu to="/app/chat" nameId="sidebar.chat" icon="comment" />
         </ul>
       </CustomScrollbars>
     );

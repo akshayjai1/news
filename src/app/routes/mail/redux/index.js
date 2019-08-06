@@ -1,22 +1,22 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux'
-import Button from '@material-ui/core/Button';
-import Drawer from '@material-ui/core/Drawer';
-import Checkbox from '@material-ui/core/Checkbox';
-import Snackbar from '@material-ui/core/Snackbar';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import folders from '../data/folders';
-import filters from '../data/filters';
-import labels from '../data/labels';
-import options from '../data/options';
-import MailList from 'components/mail/MailList';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Button from "@material-ui/core/Button";
+import Drawer from "@material-ui/core/Drawer";
+import Checkbox from "@material-ui/core/Checkbox";
+import Snackbar from "@material-ui/core/Snackbar";
+import IconButton from "@material-ui/core/IconButton";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import folders from "../data/folders";
+import filters from "../data/filters";
+import labels from "../data/labels";
+import options from "../data/options";
+import MailList from "components/mail/MailList";
 
-import ComposeMail from 'components/mail/Compose/index';
-import AppModuleHeader from 'components/AppModuleHeader/index';
-import MailDetail from 'components/mail/MailDetail/index';
+import ComposeMail from "components/mail/Compose/index";
+import AppModuleHeader from "components/AppModuleHeader/index";
+import MailDetail from "components/mail/MailDetail/index";
 import {
   fetchMails,
   getAllMail,
@@ -50,82 +50,98 @@ import {
   onStartSelect,
   setCurrentMailNull,
   updateMailSearch
-} from 'actions/Mail';
-import IntlMessages from 'util/IntlMessages';
-import CustomScrollbars from 'util/CustomScrollbars';
-
+} from "actions/Mail";
+import IntlMessages from "util/IntlMessages";
+import CustomScrollbars from "util/CustomScrollbars";
 
 class MailWithRedux extends Component {
-
   MailSideBar = () => {
-    return <div className="module-side">
-
-      <div className="module-side-header">
-        <div className="module-logo">
-          <i className="zmdi zmdi-email mr-4"/>
-          <span><IntlMessages id="mail.mailbox"/></span>
+    return (
+      <div className="module-side">
+        <div className="module-side-header">
+          <div className="module-logo">
+            <i className="zmdi zmdi-email mr-4" />
+            <span>
+              <IntlMessages id="newsbox" />
+            </span>
+          </div>
         </div>
 
-      </div>
+        <div className="module-side-content">
+          <CustomScrollbars
+            className="module-side-scroll scrollbar"
+            style={{
+              height:
+                this.props.width >= 1200
+                  ? "calc(100vh - 200px)"
+                  : "calc(100vh - 80px)"
+            }}
+          >
+            <div className="module-add-task">
+              <Button
+                variant="contained"
+                color="primary"
+                className="btn-block"
+                onClick={() => {
+                  this.props.onComposeMail();
+                }}
+              >
+                <i className="zmdi zmdi-edit mr-3" />
+                <IntlMessages id="mail.compose" />{" "}
+              </Button>
+            </div>
 
-      <div className="module-side-content">
-        <CustomScrollbars className="module-side-scroll scrollbar"
-                          style={{height: this.props.width >= 1200 ? 'calc(100vh - 200px)' : 'calc(100vh - 80px)'}}>
-          <div className="module-add-task">
-            <Button variant="contained" color="primary" className="btn-block"
-                    onClick={() => {
-                      this.props.onComposeMail();
-                    }}>
-              <i className="zmdi zmdi-edit mr-3"/>
-              <IntlMessages id="mail.compose"/> </Button>
-          </div>
-
-          <ul className="module-nav">
-
-            {this.getNavFolders()}
-
+            <ul className="module-nav">
+              {this.getNavFolders()}
+              {/* 
             <li className="module-nav-label">
               <IntlMessages id="mail.filters"/>
             </li>
 
-            {this.getNavFilters()}
+            {this.getNavFilters()} */}
 
-            <li className="module-nav-label">
-              <IntlMessages id="mail.labels"/>
-            </li>
+              <li className="module-nav-label">
+                <IntlMessages id="mail.labels" />
+              </li>
 
-            {this.getNavLabels()}
-
-          </ul>
-        </CustomScrollbars>
+              {this.getNavLabels()}
+            </ul>
+          </CustomScrollbars>
+        </div>
       </div>
-    </div>
+    );
   };
 
   onDeleteMail = () => {
     this.props.onDeleteMail();
   };
   getNavFolders = () => {
-    return folders.map((folder, index) =>
-      <li key={index} onClick={() => {
-        this.props.getNavFolders(folder);
-        setTimeout(() => {
-          this.props.hideMailLoader();
-        }, 1500);
-      }
-      }>
-        <span className={`jr-link ${this.props.selectedFolder === folder.id ? 'active' : ''}`}>
-          <i className={`zmdi zmdi-${folder.icon}`}/>
+    return folders.map((folder, index) => (
+      <li
+        key={index}
+        onClick={() => {
+          this.props.getNavFolders(folder);
+          setTimeout(() => {
+            this.props.hideMailLoader();
+          }, 1500);
+        }}
+      >
+        <span
+          className={`jr-link ${
+            this.props.selectedFolder === folder.id ? "active" : ""
+          }`}
+        >
+          <i className={`zmdi zmdi-${folder.icon}`} />
           <span>{folder.title}</span>
         </span>
       </li>
-    )
+    ));
   };
-  onFolderMenuItemSelect = (folderId) => {
+  onFolderMenuItemSelect = folderId => {
     this.props.handleMailRequestClose();
     this.props.onFolderMenuItemSelect(folderId);
   };
-  onLabelMenuItemSelect = (label) => {
+  onLabelMenuItemSelect = label => {
     this.props.handleMailRequestClose();
     this.props.onMailLabelMenuItemSelect(label);
   };
@@ -133,71 +149,73 @@ class MailWithRedux extends Component {
     this.props.handleMailRequestClose();
   };
   getNavFilters = () => {
-    return filters.map((filter, index) =>
-      <li key={index} onClick={() => {
-        this.props.getMailNavFilters(filter);
-        setTimeout(() => {
-          this.props.hideMailLoader();
-        }, 1500);
-      }
-      }>
+    return filters.map((filter, index) => (
+      <li
+        key={index}
+        onClick={() => {
+          this.props.getMailNavFilters(filter);
+          setTimeout(() => {
+            this.props.hideMailLoader();
+          }, 1500);
+        }}
+      >
         <span className="jr-link">
-          <i className={`zmdi zmdi-${filter.icon}`}/>
+          <i className={`zmdi zmdi-${filter.icon}`} />
           <span>{filter.title}</span>
         </span>
       </li>
-    )
+    ));
   };
 
   onFolderSelect = event => {
     this.props.onFolderSelect();
     this.setState({
       anchorEl: event.currentTarget
-    })
+    });
   };
   onLabelSelect = event => {
     this.props.onMailLabelSelect();
     this.setState({
       anchorEl: event.currentTarget
-    })
+    });
   };
   onOptionMenuSelect = event => {
     this.props.onMailOptionMenuSelect();
     this.setState({
       anchorEl: event.currentTarget
-    })
+    });
   };
-  onOptionMenuItemSelect = (option) => {
+  onOptionMenuItemSelect = option => {
     switch (option.title) {
-      case 'All':
+      case "All":
         this.props.handleMailRequestClose();
         this.props.getAllMail();
         break;
-      case 'None':
+      case "None":
         this.props.handleMailRequestClose();
         this.props.getUnselectedAllMail();
         break;
-      case 'Read':
+      case "Read":
         this.props.handleMailRequestClose();
         this.props.getReadMail();
         break;
-      case 'Unread':
+      case "Unread":
         this.props.handleMailRequestClose();
         this.props.getUnreadMail();
         break;
-      case 'Starred':
+      case "Starred":
         this.props.handleMailRequestClose();
         this.props.getStarredMail();
         break;
-      case 'Unstarred':
+      case "Unstarred":
         this.props.handleMailRequestClose();
         this.props.getUnStarredMail();
         break;
-      case 'Important':
+      case "Important":
         this.props.handleMailRequestClose();
         this.props.getImportantMail();
         break;
-      case 'Unimportant':
+      case "Unimportant":
         this.props.handleMailRequestClose();
         this.props.getUnimportantMail();
         break;
@@ -231,65 +249,91 @@ class MailWithRedux extends Component {
     this.props.getUnimportantMail();
   };
   getNavLabels = () => {
-    return labels.map((label, index) =>
-      <li key={index} onClick={() => {
-        this.props.getMailNavLabels(label);
-        setTimeout(() => {
-          this.props.hideMailLoader();
-        }, 1500);
-      }
-      }>
+    return labels.map((label, index) => (
+      <li
+        key={index}
+        onClick={() => {
+          this.props.getMailNavLabels(label);
+          setTimeout(() => {
+            this.props.hideMailLoader();
+          }, 1500);
+        }}
+      >
         <span className="jr-link">
-          <i className={`zmdi zmdi-label-alt text-${label.color}`}/>
+          <i className={`zmdi zmdi-label-alt text-${label.color}`} />
           <span>{label.title}</span>
         </span>
       </li>
-    )
+    ));
   };
-  searchMail = (searchText) => {
+  searchMail = searchText => {
     this.props.onSearchMail(searchText);
   };
   displayMail = (currentMail, folderMails, noContentFoundMessage) => {
-    return (<div className="module-box-column">
-      {currentMail === null ?
-        folderMails.length === 0 ?
-          <div className="d-flex align-items-center justify-content-center"
-               style={{height: this.props.width >= 1200 ? 'calc(100vh - 259px)' : 'calc(100vh - 238px)'}}>
-            {noContentFoundMessage}
-          </div>
-          :
-          <MailList mails={folderMails} onStartSelect={this.onStartSelect.bind(this)}
-                    onMailSelect={this.onMailSelect.bind(this)}
-                    width={this.props.width}
-                    onMailChecked={this.onMailChecked.bind(this)}/>
-        :
-        <MailDetail mail={currentMail} onStartSelect={this.onStartSelect.bind(this)}
-                    width={this.props.width}
-                    onImportantSelect={this.onImportantSelect.bind(this)}/>}
-    </div>)
+    return (
+      <div className="module-box-column">
+        {currentMail === null ? (
+          folderMails.length === 0 ? (
+            <div
+              className="d-flex align-items-center justify-content-center"
+              style={{
+                height:
+                  this.props.width >= 1200
+                    ? "calc(100vh - 259px)"
+                    : "calc(100vh - 238px)"
+              }}
+            >
+              {noContentFoundMessage}
+            </div>
+          ) : (
+            <MailList
+              mails={folderMails}
+              onStartSelect={this.onStartSelect.bind(this)}
+              onMailSelect={this.onMailSelect.bind(this)}
+              width={this.props.width}
+              onMailChecked={this.onMailChecked.bind(this)}
+            />
+          )
+        ) : (
+          <MailDetail
+            mail={currentMail}
+            onStartSelect={this.onStartSelect.bind(this)}
+            width={this.props.width}
+            onImportantSelect={this.onImportantSelect.bind(this)}
+          />
+        )}
+      </div>
+    );
   };
   getMailActions = () => {
-    return <div>
-      <IconButton onClick={this.onFolderSelect.bind(this)} className="icon-btn">
-        <i className="zmdi zmdi-folder"/>
-      </IconButton>
+    return (
+      <div>
+        <IconButton
+          onClick={this.onFolderSelect.bind(this)}
+          className="icon-btn"
+        >
+          <i className="zmdi zmdi-folder" />
+        </IconButton>
 
-      <IconButton onClick={this.onDeleteMail.bind(this)} className="icon-btn">
-        <i className="zmdi zmdi-delete"/>
-      </IconButton>
+        <IconButton onClick={this.onDeleteMail.bind(this)} className="icon-btn">
+          <i className="zmdi zmdi-delete" />
+        </IconButton>
 
-      <IconButton
-        onClick={this.onLabelSelect.bind(this)} className="icon-btn">
-        <i className="zmdi zmdi-label-alt"/>
-      </IconButton>
-    </div>
+        <IconButton
+          onClick={this.onLabelSelect.bind(this)}
+          className="icon-btn"
+        >
+          <i className="zmdi zmdi-label-alt" />
+        </IconButton>
+      </div>
+    );
   };
 
   constructor() {
     super();
     this.state = {
       anchorEl: null
-    }
+    };
   }
 
   componentWillMount() {
@@ -330,25 +374,34 @@ class MailWithRedux extends Component {
 
   updateSearch(evt) {
     this.props.updateMailSearch(evt.target.value);
-    this.props.onSearchMail(evt.target.value)
+    this.props.onSearchMail(evt.target.value);
   }
 
   onToggleDrawer() {
-    this.props.onMailToggleDrawer()
+    this.props.onMailToggleDrawer();
   }
 
   render() {
-    const {selectedMails, loader, currentMail, folderMails, composeMail, user, alertMessage, showMessage, noContentFoundMessage} = this.props;
+    const {
+      selectedMails,
+      loader,
+      currentMail,
+      folderMails,
+      composeMail,
+      user,
+      alertMessage,
+      showMessage,
+      noContentFoundMessage
+    } = this.props;
     return (
-
       <div className="app-wrapper">
         <div className="animated slideInUpTiny animation-duration-3">
           <div className="app-module">
-
             <div className="d-block d-xl-none">
               <Drawer
                 open={this.props.drawerState}
-                onClose={this.onToggleDrawer.bind(this)}>
+                onClose={this.onToggleDrawer.bind(this)}
+              >
                 {this.MailSideBar()}
               </Drawer>
             </div>
@@ -357,135 +410,173 @@ class MailWithRedux extends Component {
             </div>
 
             <div className="module-box">
-
               <div className="module-box-header">
-
-                <IconButton className="drawer-btn d-block d-xl-none" aria-label="Menu"
-                            onClick={this.onToggleDrawer.bind(this)}>
-                  <i className="zmdi zmdi-menu"/>
+                <IconButton
+                  className="drawer-btn d-block d-xl-none"
+                  aria-label="Menu"
+                  onClick={this.onToggleDrawer.bind(this)}
+                >
+                  <i className="zmdi zmdi-menu" />
                 </IconButton>
-                <AppModuleHeader placeholder="Search mails" user={this.props.user}
-                                 onChange={this.updateSearch.bind(this)}
-                                 value={this.props.searchMail}/>
-
+                <AppModuleHeader
+                  placeholder="Search News"
+                  user={this.props.user}
+                  onChange={this.updateSearch.bind(this)}
+                  value={this.props.searchMail}
+                />
               </div>
 
               <div className="module-box-content">
                 <div className="module-box-topbar">
-                  {this.props.currentMail === null ?
+                  {this.props.currentMail === null ? (
                     <div className="d-flex">
-                      <Checkbox color="primary"
-                                indeterminate={selectedMails > 0 && selectedMails < folderMails.length}
-                                checked={selectedMails > 0}
-                                onChange={this.onAllMailSelect.bind(this)}
-                                value="SelectMail"/>
+                      <Checkbox
+                        color="primary"
+                        indeterminate={
+                          selectedMails > 0 &&
+                          selectedMails < folderMails.length
+                        }
+                        checked={selectedMails > 0}
+                        onChange={this.onAllMailSelect.bind(this)}
+                        value="SelectMail"
+                      />
 
-                      <div className="d-flex align-items-center" onClick={this.onOptionMenuSelect.bind(this)}>
+                      <div
+                        className="d-flex align-items-center"
+                        onClick={this.onOptionMenuSelect.bind(this)}
+                      >
                         <span className="px-2"> {this.props.optionName}</span>
                         <IconButton className="icon-btn-sm">
-
-                          <i className="zmdi zmdi-caret-down"/>
+                          <i className="zmdi zmdi-caret-down" />
                         </IconButton>
                       </div>
                     </div>
-                    :
-                    <IconButton className="icon-btn"
-                                onClick={() => {
-                                  this.props.setCurrentMailNull();
-                                }}>
-                      <i className="zmdi zmdi-arrow-back"/>
+                  ) : (
+                    <IconButton
+                      className="icon-btn"
+                      onClick={() => {
+                        this.props.setCurrentMailNull();
+                      }}
+                    >
+                      <i className="zmdi zmdi-arrow-back" />
                     </IconButton>
-                  }
+                  )}
 
-                  {(selectedMails > 0) && this.getMailActions()}
+                  {selectedMails > 0 && this.getMailActions()}
 
-
-                  <Menu id="option-menu"
-                        anchorEl={this.state.anchorEl}
-                        open={this.props.optionMenuState}
-                        onClose={this.handleRequestClose}
-
-                        MenuListProps={{
-                          style: {
-                            width: 150,
-                          },
-                        }}>
-                    {options.map(option =>
-                      <MenuItem key={option.title}
-                                onClick={this.onOptionMenuItemSelect.bind(this, option)}>
+                  <Menu
+                    id="option-menu"
+                    anchorEl={this.state.anchorEl}
+                    open={this.props.optionMenuState}
+                    onClose={this.handleRequestClose}
+                    MenuListProps={{
+                      style: {
+                        width: 150
+                      }
+                    }}
+                  >
+                    {options.map(option => (
+                      <MenuItem
+                        key={option.title}
+                        onClick={this.onOptionMenuItemSelect.bind(this, option)}
+                      >
                         {option.title}
-                      </MenuItem>,
-                    )}
+                      </MenuItem>
+                    ))}
                   </Menu>
 
-                  <Menu id="folder-menu"
-                        anchorEl={this.state.anchorEl}
-                        open={this.props.folderMenuState}
-                        onClose={this.handleRequestClose}
-
-                        MenuListProps={{
-                          style: {
-                            width: 150,
-                          },
-                        }}>
-                    {folders.map(folder =>
-                      <MenuItem key={folder.id}
-                                onClick={this.onFolderMenuItemSelect.bind(this, folder.id)}>
+                  <Menu
+                    id="folder-menu"
+                    anchorEl={this.state.anchorEl}
+                    open={this.props.folderMenuState}
+                    onClose={this.handleRequestClose}
+                    MenuListProps={{
+                      style: {
+                        width: 150
+                      }
+                    }}
+                  >
+                    {folders.map(folder => (
+                      <MenuItem
+                        key={folder.id}
+                        onClick={this.onFolderMenuItemSelect.bind(
+                          this,
+                          folder.id
+                        )}
+                      >
                         {folder.title}
-                      </MenuItem>,
-                    )}
+                      </MenuItem>
+                    ))}
                   </Menu>
-                  <Menu id="label-menu"
-                        anchorEl={this.state.anchorEl}
-                        open={this.props.labelMenuState}
-                        onClose={this.handleRequestClose}
-
-                        MenuListProps={{
-                          style: {
-                            width: 150,
-                          },
-                        }}>
-                    {labels.map(label =>
-                      <MenuItem key={label.id}
-                                onClick={this.onLabelMenuItemSelect.bind(this, label)}>
+                  <Menu
+                    id="label-menu"
+                    anchorEl={this.state.anchorEl}
+                    open={this.props.labelMenuState}
+                    onClose={this.handleRequestClose}
+                    MenuListProps={{
+                      style: {
+                        width: 150
+                      }
+                    }}
+                  >
+                    {labels.map(label => (
+                      <MenuItem
+                        key={label.id}
+                        onClick={this.onLabelMenuItemSelect.bind(this, label)}
+                      >
                         {label.title}
-                      </MenuItem>,
-                    )}
+                      </MenuItem>
+                    ))}
                   </Menu>
                 </div>
 
-                {loader ?
-                  <div className="loader-view"
-                       style={{height: this.props.width >= 1200 ? 'calc(100vh - 259px)' : 'calc(100vh - 238px)'}}>
-                    <CircularProgress/>
-                  </div> : this.displayMail(currentMail, folderMails, noContentFoundMessage)}
+                {loader ? (
+                  <div
+                    className="loader-view"
+                    style={{
+                      height:
+                        this.props.width >= 1200
+                          ? "calc(100vh - 259px)"
+                          : "calc(100vh - 238px)"
+                    }}
+                  >
+                    <CircularProgress />
+                  </div>
+                ) : (
+                  this.displayMail(
+                    currentMail,
+                    folderMails,
+                    noContentFoundMessage
+                  )
+                )}
 
-                <ComposeMail open={composeMail} user={user}
-                             onClose={this.handleRequestClose.bind(this)}
-                             onMailSend={this.onMailSend.bind(this)}/>
-
+                <ComposeMail
+                  open={composeMail}
+                  user={user}
+                  onClose={this.handleRequestClose.bind(this)}
+                  onMailSend={this.onMailSend.bind(this)}
+                />
               </div>
             </div>
           </div>
           <Snackbar
-            anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}
             open={showMessage}
             autoHideDuration={3000}
             onClose={this.handleRequestClose}
             ContentProps={{
-              'aria-describedby': 'message-id',
+              "aria-describedby": "message-id"
             }}
             message={<span id="message-id">{alertMessage}</span>}
           />
         </div>
       </div>
-    )
+    );
   }
 }
 
-
-const mapStateToProps = ({mail, settings}) => {
-  const {width} = settings;
+const mapStateToProps = ({ mail, settings }) => {
+  const { width } = settings;
   const {
     searchMail,
     noContentFoundMessage,
@@ -527,41 +618,43 @@ const mapStateToProps = ({mail, settings}) => {
     folderMenuState,
     optionMenuState,
     folderMails
-  }
+  };
 };
 
-
-export default connect(mapStateToProps, {
-  getAllMail,
-  fetchMails,
-  getImportantMail,
-  getMailNavFilters,
-  getMailNavLabels,
-  getNavFolders,
-  getReadMail,
-  getStarredMail,
-  getUnimportantMail,
-  getUnreadMail,
-  getUnselectedAllMail,
-  getUnStarredMail,
-  handleMailRequestClose,
-  hideMailLoader,
-  onAllMailSelect,
-  onComposeMail,
-  onDeleteMail,
-  onFolderMenuItemSelect,
-  onFolderSelect,
-  onImportantSelect,
-  onMailChecked,
-  onMailLabelMenuItemSelect,
-  onMailLabelSelect,
-  onMailOptionMenuSelect,
-  onMailSelect,
-  onMailSend,
-  onMailToggleDrawer,
-  onOptionMenuItemSelect,
-  onSearchMail,
-  onStartSelect,
-  setCurrentMailNull,
-  updateMailSearch
-})(MailWithRedux);
+export default connect(
+  mapStateToProps,
+  {
+    getAllMail,
+    fetchMails,
+    getImportantMail,
+    getMailNavFilters,
+    getMailNavLabels,
+    getNavFolders,
+    getReadMail,
+    getStarredMail,
+    getUnimportantMail,
+    getUnreadMail,
+    getUnselectedAllMail,
+    getUnStarredMail,
+    handleMailRequestClose,
+    hideMailLoader,
+    onAllMailSelect,
+    onComposeMail,
+    onDeleteMail,
+    onFolderMenuItemSelect,
+    onFolderSelect,
+    onImportantSelect,
+    onMailChecked,
+    onMailLabelMenuItemSelect,
+    onMailLabelSelect,
+    onMailOptionMenuSelect,
+    onMailSelect,
+    onMailSend,
+    onMailToggleDrawer,
+    onOptionMenuItemSelect,
+    onSearchMail,
+    onStartSelect,
+    setCurrentMailNull,
+    updateMailSearch
+  }
+)(MailWithRedux);

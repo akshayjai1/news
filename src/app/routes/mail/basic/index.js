@@ -30,7 +30,7 @@ class Mail extends Component {
       <div className="module-side-header">
         <div className="module-logo">
           <i className="zmdi zmdi-email mr-3"/>
-          <span><IntlMessages id="mail.mailbox"/></span>
+          <span><IntlMessages id="newsbox"/></span>
         </div>
 
       </div>
@@ -51,11 +51,11 @@ class Mail extends Component {
 
             {this.getNavFolders()}
 
-            <li className="module-nav-label">
+            {/* <li className="module-nav-label">
               <IntlMessages id="mail.filters"/>
             </li>
 
-            {this.getNavFilters()}
+            {this.getNavFilters()} */}
 
             <li className="module-nav-label">
               <IntlMessages id="mail.labels"/>
