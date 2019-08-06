@@ -171,30 +171,30 @@ class SidenavContent extends Component {
             nameId="sidebar.dashboard"
             icon="view-dashboard"
           />
-          <SingleMenu to="/app/allnews" nameId="allnews" icon="rss" />
-
-          <ParentMenu
-            childLinks={FreelancerChild}
-            parentNameId="sidebar.freelancer"
-            parentIcon="account-o"
-          />
-          <ParentMenu
-            childLinks={OnaChild}
-            parentNameId="sidebar.onateam"
-            parentIcon="account-box-phone"
-          />
-          <ParentMenu
-            childLinks={GovernChilds}
-            parentNameId="sidebar.government"
-            parentIcon="city-alt"
+          <SingleMenu
+            to="/app/allnews"
+            nameId="compose-news"
+            icon="email-open"
           />
           <SingleMenu to="/app/mail-redux" nameId="newsbox" icon="email" />
-          {/* <SingleMenu
+          <SingleMenu
             to="/app/dashboard"
-            nameId="sidebar.sentitems"
+            nameId="sent-items"
             icon="arrow-right-top"
-          /> */}
-          <SingleMenu to="/app/chat" nameId="sidebar.chat" icon="comment" />
+          />
+          <SingleMenu
+            to="/app/allnews"
+            nameId="images"
+            icon="collection-image"
+          />
+          <SingleMenu to="/app/allnews" nameId="audios" icon="playlist-audio" />
+          <SingleMenu
+            to="/app/allnews"
+            nameId="videos"
+            icon="collection-video"
+          />
+          <SingleMenu to="/app/chat" nameId="chat" icon="comment" />
+          <SingleMenu to="/app/allnews" nameId="report" icon="view-list" />
         </ul>
       </CustomScrollbars>
     );

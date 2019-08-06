@@ -37,6 +37,7 @@ import TopNav from "components/TopNav";
 import SocialApps from "./routes/socialApps";
 import { iDashboard } from "./routes/dashboard/routes/iDashboard";
 import AllNews from "./routes/dashboard/routes/AllNews/AllNews";
+import { cDashboard } from "./routes/dashboard/routes/cDashboard";
 
 class App extends React.Component {
   render() {
@@ -84,7 +85,7 @@ class App extends React.Component {
           <main className="app-main-content-wrapper">
             <div className="app-main-content">
               <Switch>
-                <Route path={`${match.url}/dashboard`} component={iDashboard} />
+                <Route path={`${match.url}/dashboard`} component={cDashboard} />
                 <Route path={`${match.url}/allnews`} component={AllNews} />
                 <Route
                   path={`${match.url}/newsagency/news-agency-1`}

@@ -61,7 +61,7 @@ export const ParentMenu = props => {
         <li>
           <NavLink className="prepend-icon" to="/app/dashboard/misc">
             <span className="nav-text">
-              <IntlMessages id="sidebar.dashboard.sentitems" />
+              <IntlMessages id="sent-items" />
             </span>
           </NavLink>
         </li>

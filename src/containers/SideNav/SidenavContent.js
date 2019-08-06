@@ -195,10 +195,10 @@ class SidenavContent extends Component {
           <SingleMenu to="/app/mail-redux" nameId="newsbox" icon="email" />
           {/* <SingleMenu
             to="/app/dashboard"
-            nameId="sidebar.sentitems"
+            nameId="sent-items"
             icon="arrow-right-top"
           /> */}
-          <SingleMenu to="/app/chat" nameId="sidebar.chat" icon="comment" />
+          <SingleMenu to="/app/chat" nameId="chat" icon="comment" />
         </ul>
       </CustomScrollbars>
     );

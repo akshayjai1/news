@@ -28,7 +28,7 @@ const CategoryLegendData = [
     color: "bg-orange"
   },
   {
-    name: "totalnews",
+    name: "total-news",
     color: "bg-blue"
   }
 ];
