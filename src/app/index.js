@@ -186,6 +186,7 @@ class App extends React.Component {
                     import("./routes/mail/basic/index")
                   )}
                 />
+
                 <Route
                   path={`${match.url}/mail-redux`}
                   component={asyncComponent(() =>

@@ -10,6 +10,7 @@ import {
   HORIZONTAL_NAVIGATION
 } from "constants/ActionTypes";
 import { toggleCollapsedNav, updateWindowWidth } from "actions/Setting";
+import CreatorNavContent from "./CreatorNavContent";
 
 class SideNav extends React.PureComponent {
   onToggleCollapsedNav = e => {
@@ -24,7 +25,13 @@ class SideNav extends React.PureComponent {
   }
 
   render() {
-    const { navCollapsed, drawerType, width, navigationStyle } = this.props;
+    const {
+      navCollapsed,
+      drawerType,
+      width,
+      navigationStyle,
+      role
+    } = this.props;
     let drawerStyle = drawerType.includes(FIXED_DRAWER)
       ? "d-xl-flex"
       : drawerType.includes(COLLAPSED_DRAWER)
@@ -42,6 +49,8 @@ class SideNav extends React.PureComponent {
       drawerStyle = "";
       type = "temporary";
     }
+    const SideBarComponent =
+      role === "editor" ? SidenavContent : CreatorNavContent;
     return (
       <div className={`app-sidebar d-none ${drawerStyle}`}>
         <Drawer
@@ -54,16 +63,25 @@ class SideNav extends React.PureComponent {
           }}
         >
           <UserInfo />
-          {/* <SidenavContent /> */}
+          <SideBarComponent />
         </Drawer>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ settings }) => {
+const mapStateToProps = ({ settings, auth }) => {
   const { navCollapsed, drawerType, width, navigationStyle } = settings;
-  return { navCollapsed, drawerType, width, navigationStyle };
+  const { email, authUser, role } = auth;
+  return {
+    navCollapsed,
+    drawerType,
+    width,
+    navigationStyle,
+    email,
+    authUser,
+    role
+  };
 };
 
 export default withRouter(

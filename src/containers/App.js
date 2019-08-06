@@ -158,9 +158,12 @@ class App extends Component {
       isDarkTheme,
       locale,
       authUser,
+      email,
+      role,
       initURL,
       isDirectionRTL
     } = this.props;
+    const mainComponent = role === "editor" ? MainApp : CreatorApp;
     let { themeColor } = this.props;
     let applyTheme = createMuiTheme(indigoTheme);
     if (isDarkTheme) {
@@ -200,12 +203,7 @@ class App extends Component {
                   <RestrictedRoute
                     path={`${match.url}app`}
                     authUser={authUser}
-                    component={MainApp}
-                  />
-                  <RestrictedRoute
-                    path={`${match.url}capp`}
-                    authUser={authUser}
-                    component={CreatorApp}
+                    component={mainComponent}
                   />
                   <Route path="/signin" component={SignIn} />
                   <Route path="/signup" component={SignUp} />
