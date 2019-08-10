@@ -290,6 +290,7 @@
   "ona1": "ONA 1",
   "ona2": "ONA 2",
   "ona3": "ONA 3",
+  "organization-news-statistics": "Organization News Statistic",
   "sidebar.main": "Main",
   "sidebar.dashboard": "Dashboard",
 
@@ -635,5 +636,6 @@
   "video": "Video",
   "videos": "Videos",
   "your_news_source_statistics": "Your News Source Statistics",
-  "your_news_category_statistics": "Your News Category Statistics"
+  "your-earnings": "Your Earnings",
+  "news-category-wise-per-month": "News Categories per Month"
 }

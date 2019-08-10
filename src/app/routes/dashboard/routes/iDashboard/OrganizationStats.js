@@ -187,11 +187,12 @@ const StatisticsLegend = props => {
   );
 };
 // 48548;
-const OrganizationStats = () => {
+const OrganizationStats = props => {
+  const { heading } = props;
   return (
     <div className="jr-card">
       <div className="jr-card-header d-flex align-items-center">
-        <h3 className="mb-0">Organization News Statistic</h3>
+        <h3 className="mb-0">{heading}</h3>
       </div>
       <div className="row mb-3">
         {statisticsLegendData.map(e => (

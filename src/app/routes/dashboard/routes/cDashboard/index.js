@@ -19,11 +19,11 @@ export const cDashboard = props => {
         <CreatorCard />
         <div className="row">
           <EditorCategoryScoreGraph />
-          <CardBox heading="Category Statistics">
+          <CardBox heading="News by Category">
             <CategoryBar />
           </CardBox>
         </div>
-        <OrganizationStats />
+        <OrganizationStats heading={<IntlMessages id="your-earnings" />} />
         {/* <div className="col-lg-6 col-sm-6 col-12">
           <ReportBox
             styleName="bg-pink text-white p-3"

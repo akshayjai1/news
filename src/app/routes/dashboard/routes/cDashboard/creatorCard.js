@@ -18,7 +18,7 @@ const CreatorCard = props => {
         >
           <ResponsiveContainer width="100%" height={100}>
             <YearlyProfitChart
-              centerText=""
+              centerText="560"
               height={100}
               chartType="newsDoughnut"
               backgroundColor={[

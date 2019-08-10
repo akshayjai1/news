@@ -31,7 +31,9 @@ export const iDashboard = props => {
             <CategoryBar />
           </CardBox>
         </div>
-        <OrganizationStats />
+        <OrganizationStats
+          heading={<IntlMessages id="organization-news-statistics" />}
+        />
         {/* <div className="col-lg-6 col-sm-6 col-12">
           <ReportBox
             styleName="bg-pink text-white p-3"
