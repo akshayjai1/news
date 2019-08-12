@@ -1,0 +1,31 @@
+sample upload code
+<input name="file" type="file"
+   class="file-upload" data-cloudinary-field="image_id"
+   data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}"/>
+
+   sample image manipulation tags
+   <CloudinaryContext cloudName="digil">
+    <Image publicId="sample" format="jpg">
+        <Transformation crop="fill" gravity="faces" width="300" height="200"/>
+    </Image>
+</CloudinaryContext>
+
+cloudinary
+
+Cloud name:	
+digil
+
+API Key:	
+215534141833598
+
+API Secret:	
+K5jlE_-kZ-mWDnOBjpnePWeT5No
+
+Environment variable:	
+CLOUDINARY_URL=cloudinary://215534141833598:K5jlE_-kZ-mWDnOBjpnePWeT5No@digil
+
+Base delivery URL:	http://res.cloudinary.com/digil ▼
+
+Secure delivery URL:	https://res.cloudinary.com/digil ▼
+
+API Base URL:	https://api.cloudinary.com/v1_1/digil ▼
