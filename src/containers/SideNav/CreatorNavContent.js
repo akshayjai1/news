@@ -176,7 +176,7 @@ class SidenavContent extends Component {
             nameId="compose-news"
             icon="email-open"
           />
-          <SingleMenu to="/app/mail-redux" nameId="newsbox" icon="email" />
+          <SingleMenu to="/app/newsbox" nameId="newsbox" icon="email" />
           <SingleMenu
             to="/app/dashboard"
             nameId="sent-items"

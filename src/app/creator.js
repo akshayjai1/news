@@ -39,6 +39,7 @@ import { iDashboard } from "./routes/dashboard/routes/iDashboard";
 import AllNews from "./routes/dashboard/routes/AllNews/AllNews";
 import { cDashboard } from "./routes/dashboard/routes/cDashboard";
 import ComposeNews from "./routes/dashboard/routes/cDashboard/ComposeNews";
+import CreatorAllNews from "./routes/dashboard/routes/cDashboard/CreatorNews/CreatorAllNews";
 
 class App extends React.Component {
   render() {
@@ -87,7 +88,10 @@ class App extends React.Component {
             <div className="app-main-content">
               <Switch>
                 <Route path={`${match.url}/dashboard`} component={cDashboard} />
-                <Route path={`${match.url}/allnews`} component={AllNews} />
+                <Route
+                  path={`${match.url}/newsbox`}
+                  component={CreatorAllNews}
+                />
                 <Route path={`${match.url}/compose`} component={ComposeNews} />
                 <Route
                   path={`${match.url}/social-apps`}
