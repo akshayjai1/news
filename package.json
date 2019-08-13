@@ -52,9 +52,12 @@
     "react-dom": "^16.8.6",
     "react-draft-wysiwyg": "^1.13.2",
     "react-dropzone": "^10.1.5",
+    "react-file-uploader": "^1.0.0",
     "react-google-maps": "^9.4.5",
     "react-hot-loader": "^4.9.0",
     "react-icons": "^3.7.0",
+    "react-image-upload": "0.0.1",
+    "react-images-upload": "^1.2.7",
     "react-intl": "^2.9.0",
     "react-joyride": "^2.0.5",
     "react-jvectormap": "^0.0.12",
@@ -83,7 +86,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2",
     "typeface-roboto": "^0.0.54",
-    "url-search-params": "^1.1.0"
+    "url-search-params": "^1.1.0",
+    "video-react": "^0.14.1"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",

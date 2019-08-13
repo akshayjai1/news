@@ -29,3 +29,9 @@ Base delivery URL:	http://res.cloudinary.com/digil ▼
 Secure delivery URL:	https://res.cloudinary.com/digil ▼
 
 API Base URL:	https://api.cloudinary.com/v1_1/digil ▼
+https://uppy.io/docs/ ( for image upload component)
+
+https://programmingwithmosh.com/javascript/react-file-upload-proper-server-side-nodejs-easy/
+
+https://codepen.io/hartzis/pen/VvNGZP
+https://video-react.js.org/

@@ -172,7 +172,7 @@ class SidenavContent extends Component {
             icon="view-dashboard"
           />
           <SingleMenu
-            to="/app/allnews"
+            to="/app/compose"
             nameId="compose-news"
             icon="email-open"
           />
