@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import radium, { Style } from "radium";
 
-import mq from "../../styles/mq";
-import { gutter } from "../../utils/grid";
+import mq from "styles/mq";
+import { gutter } from "util/utils/grid";
 import ArticlePreview from "../articlePreview";
 import CalloutLink from "../calloutLink";
 import Heading from "../heading";
