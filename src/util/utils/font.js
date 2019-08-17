@@ -1,4 +1,4 @@
-import { fonts } from "../styles";
+import { fonts } from "../../styles";
 
 /**
  * Return a font stack

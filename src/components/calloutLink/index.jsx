@@ -5,24 +5,23 @@ import assign from "object-assign";
 
 import colors from "../../styles/colors";
 import timing from "../../styles/timing";
-import { rgb } from "../../utils/color";
-import font from "../../utils/font";
-import { blueLink, outline } from "../../utils/mixins";
-import { ChevronRight } from "../icon";
-import createQAHook from "../../utils/createQAHook";
+import { rgb } from "../../util/utils/color";
+import font from "../../util/utils/font";
+import { blueLink, outline } from "../../util/utils/mixins";
+import createQAHook from "../../util/utils/createQAHook";
 
 const styles = {
   container: {
     display: "inline-block",
     fontFamily: font("benton"),
-    lineHeight: 1,
+    lineHeight: 1
   },
 
   border: {
     backgroundColor: `${colors.borderPrimary}`,
     height: "1px",
     marginBottom: "11px",
-    width: "calc(100% + 64px)",
+    width: "calc(100% + 64px)"
   },
 
   link: assign({}, blueLink(), {
@@ -31,7 +30,7 @@ const styles = {
     fontWeight: 600,
     letterSpacing: "0.06px",
     textDecoration: "none",
-    textTransform: "uppercase",
+    textTransform: "uppercase"
   }),
 
   linkWhite: {
@@ -39,7 +38,7 @@ const styles = {
 
     ":hover": { color: colors.bgPrimary },
     ":active": { color: colors.bgPrimary },
-    ":focus": assign({}, outline(), { color: colors.bgPrimary }),
+    ":focus": assign({}, outline(), { color: colors.bgPrimary })
   },
 
   icon: {
@@ -47,20 +46,20 @@ const styles = {
     marginLeft: "8px",
     marginTop: "-2px",
     transition: `transform ${timing.fast} ease-in-out`,
-    width: "5px",
+    width: "5px"
   },
 
   scoped: {
     ".CalloutLink > a:hover .Icon": {
-      transform: "translateX(-3px)",
+      transform: "translateX(-3px)"
     },
     ".CalloutLink > a:active .Icon": {
-      transform: "translateX(-3px)",
+      transform: "translateX(-3px)"
     },
     ".CalloutLink > a:focus .Icon": {
-      transform: "translateX(-3px)",
-    },
-  },
+      transform: "translateX(-3px)"
+    }
+  }
 };
 
 const CalloutLink = ({ children, href, overlay, style, qaHook }) => (
@@ -69,8 +68,12 @@ const CalloutLink = ({ children, href, overlay, style, qaHook }) => (
 
     <div style={styles.border} />
 
-    <a style={[styles.link, overlay && styles.linkWhite]} href={href} data-testid={qaHook ? createQAHook(children, "callout", "link") : null}>
-      {children} <ChevronRight style={styles.icon} />
+    <a
+      style={[styles.link, overlay && styles.linkWhite]}
+      href={href}
+      data-testid={qaHook ? createQAHook(children, "callout", "link") : null}
+    >
+      {children}
     </a>
   </div>
 );
@@ -80,12 +83,12 @@ CalloutLink.propTypes = {
   href: PropTypes.string.isRequired,
   overlay: PropTypes.bool,
   style: PropTypes.objectOf(PropTypes.object),
-  qaHook: PropTypes.bool,
+  qaHook: PropTypes.bool
 };
 
 CalloutLink.defaultProps = {
   overlay: false,
-  qaHook: false,
+  qaHook: false
 };
 
 export default radium(CalloutLink);

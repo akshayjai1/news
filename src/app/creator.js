@@ -40,6 +40,7 @@ import AllNews from "./routes/dashboard/routes/AllNews/AllNews";
 import { cDashboard } from "./routes/dashboard/routes/cDashboard";
 import ComposeNews from "./routes/dashboard/routes/cDashboard/ComposeNews";
 import CreatorAllNews from "./routes/dashboard/routes/cDashboard/CreatorNews/CreatorAllNews";
+import CreatorNewsBox from "./routes/mail/redux/CreatorNewsBox";
 
 class App extends React.Component {
   render() {
@@ -90,7 +91,13 @@ class App extends React.Component {
                 <Route path={`${match.url}/dashboard`} component={cDashboard} />
                 <Route
                   path={`${match.url}/newsbox`}
-                  component={CreatorAllNews}
+                  component={CreatorNewsBox}
+                />
+                <Route
+                  path={`${match.url}/sent-item`}
+                  component={asyncComponent(() =>
+                    import("./routes/mail/redux/index")
+                  )}
                 />
                 <Route path={`${match.url}/compose`} component={ComposeNews} />
                 <Route

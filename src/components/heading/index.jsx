@@ -11,12 +11,12 @@ import {
   fontSizeUppercase,
   fontWeightLight,
   fontWeightRegular,
-  fontWeightMedium,
+  fontWeightMedium
 } from "../../styles/typography";
-import { rgba } from "../../utils/color";
-import font from "../../utils/font";
-import propTypes from "../../utils/propTypes";
-import createQAHook from "../../utils/createQAHook";
+import { rgba } from "../../util/utils/color";
+import font from "../../util/utils/font";
+import propTypes from "../../util/utils/propTypes";
+import createQAHook from "../../util/utils/createQAHook";
 
 const styles = {
   base: {
@@ -25,93 +25,93 @@ const styles = {
     marginTop: 0,
     marginRight: 0,
     marginBottom: 0,
-    marginLeft: 0,
+    marginLeft: 0
   },
 
   size: {
     tiny: {
-      fontSize: `${fontSizeUppercase}px`,
+      fontSize: `${fontSizeUppercase}px`
     },
     small: {
       fontSize: `${fontSizeUppercase}px`,
 
       [`@media (min-width: ${mq.min[600]})`]: {
-        fontSize: `${(fontSizeUppercase + 2)}px`,
-      },
+        fontSize: `${fontSizeUppercase + 2}px`
+      }
     },
     medium: {
-      fontSize: `${(fontSizeHeading5 + 2)}px`,
-      lineHeight: (40 / 26),
+      fontSize: `${fontSizeHeading5 + 2}px`,
+      lineHeight: 40 / 26
     },
     large: {
-      fontSize: `${(fontSizeHeading2 - 8)}px`,
+      fontSize: `${fontSizeHeading2 - 8}px`,
 
       [`@media (min-width: ${mq.min[600]})`]: {
-        fontSize: `${(fontSizeHeading2 - 3)}px`,
-      },
+        fontSize: `${fontSizeHeading2 - 3}px`
+      }
     },
     huge: {
-      fontSize: `${(fontSizeHeading4 + 2)}px`,
+      fontSize: `${fontSizeHeading4 + 2}px`,
       letterSpacing: "-1px",
-      lineHeight: (36 / 30),
+      lineHeight: 36 / 30,
 
       [`@media (min-width: ${mq.min[600]})`]: {
         fontSize: `${fontSizeHeading1}px`,
-        lineHeight: (70 / 64),
-      },
-    },
+        lineHeight: 70 / 64
+      }
+    }
   },
 
   weight: {
     extraThin: {
-      fontWeight: fontWeightLight,
+      fontWeight: fontWeightLight
     },
     thin: {
-      fontWeight: fontWeightLight,
+      fontWeight: fontWeightLight
     },
     normal: {
-      fontWeight: fontWeightRegular,
+      fontWeight: fontWeightRegular
     },
     thick: {
-      fontWeight: fontWeightMedium,
-    },
+      fontWeight: fontWeightMedium
+    }
   },
 
   importance: {
     low: {
-      color: rgba(colors.textPrimary, 0.35),
+      color: rgba(colors.textPrimary, 0.35)
     },
     normal: {
-      color: colors.textPrimary,
+      color: colors.textPrimary
     },
     high: {
-      color: colors.textPrimary,
+      color: colors.textPrimary
     },
     alert: {
-      color: colors.accentRed,
-    },
+      color: colors.accentRed
+    }
   },
 
   variant: {
     caps: {
-      textTransform: "uppercase",
+      textTransform: "uppercase"
     },
 
     truncate: {
       overflow: "hidden",
       textOverflow: "ellipsis",
-      whiteSpace: "nowrap",
-    },
+      whiteSpace: "nowrap"
+    }
   },
 
   tracking: {
     tight: {
-      letterSpacing: "-1px",
+      letterSpacing: "-1px"
     },
     loose: {
-      letterSpacing: "1px",
-    },
-  },
+      letterSpacing: "1px"
+    }
+  }
 };
 
 /**
@@ -127,14 +127,16 @@ function Heading({
   truncate,
   caps,
   override,
-  qaHook,
+  qaHook
 }) {
   const Component = `h${level}`;
 
   return (
     <Component
       className="Heading"
-      data-testid={qaHook ? createQAHook(children, "heading", `${Component}`) : null}
+      data-testid={
+        qaHook ? createQAHook(children, "heading", `${Component}`) : null
+      }
       style={[
         styles.base,
         size && styles.size[size],
@@ -143,7 +145,7 @@ function Heading({
         tracking && styles.tracking[tracking],
         truncate && styles.variant.truncate,
         caps && styles.variant.caps,
-        override,
+        override
       ]}
     >
       {children}
@@ -160,54 +162,28 @@ Heading.propTypes = {
   /**
    * Creates the heading element
    */
-  level: PropTypes.oneOf([
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-  ]).isRequired,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
 
   /**
    * Declares the font size of the heading
    */
-  size: PropTypes.oneOf([
-    "huge",
-    "large",
-    "medium",
-    "small",
-    "tiny",
-  ]).isRequired,
+  size: PropTypes.oneOf(["huge", "large", "medium", "small", "tiny"])
+    .isRequired,
 
   /**
    * Adjusts the font weight of the heading
    */
-  weight: PropTypes.oneOf([
-    "thick",
-    "normal",
-    "thin",
-    "extraThin",
-  ]),
+  weight: PropTypes.oneOf(["thick", "normal", "thin", "extraThin"]),
 
   /**
    * The heading color changes based on importance
    */
-  importance: PropTypes.oneOf([
-    "alert",
-    "high",
-    "normal",
-    "low",
-  ]),
+  importance: PropTypes.oneOf(["alert", "high", "normal", "low"]),
 
   /**
    * Controls the letter spacing
    */
-  tracking: PropTypes.oneOf([
-    "tight",
-    "normal",
-    "loose",
-  ]),
+  tracking: PropTypes.oneOf(["tight", "normal", "loose"]),
 
   /**
    * Whether or not to hide the text overflow with an ellipsis
@@ -227,7 +203,7 @@ Heading.propTypes = {
   /**
    * Boolean value for qa hook
    */
-  qaHook: PropTypes.bool,
+  qaHook: PropTypes.bool
 };
 
 Heading.defaultProps = {
@@ -239,7 +215,7 @@ Heading.defaultProps = {
   truncate: false,
   caps: false,
   override: {},
-  qaHook: false,
+  qaHook: false
 };
 
 Heading.styles = styles;

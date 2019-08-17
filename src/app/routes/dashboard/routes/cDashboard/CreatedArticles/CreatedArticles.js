@@ -4,9 +4,9 @@ import radium, { Style } from "radium";
 
 import mq from "styles/mq";
 import { gutter } from "util/utils/grid";
-import ArticlePreview from "../articlePreview";
-import CalloutLink from "../calloutLink";
-import Heading from "../heading";
+import ArticlePreview from "./articlePreview";
+import CalloutLink from "../../../../../../components/calloutLink";
+import Heading from "../../../../../../components/heading";
 
 const styles = {
   header: {
