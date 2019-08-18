@@ -6,7 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import IconButton from "@material-ui/core/IconButton";
 import CardLayout from "components/CardLayout/index";
-import CardMenu from "components/dashboard/Common/CardMenu";
+import CardMenu from "components/CardHeader/CardMenu";
 import IntlMessages from "util/IntlMessages";
 import gallery, { videoUrls } from "./galleryData";
 import CustomScrollbars from "util/CustomScrollbars";

@@ -21,7 +21,6 @@ import CreatorNews from "components/mail/MailList/CreatorNews";
 
 import ComposeMail from "components/mail/Compose/index";
 import AppModuleHeader from "components/AppModuleHeader/index";
-import MailDetail from "components/mail/MailDetail/index";
 import {
   fetchMails,
   getAllMail,
@@ -58,8 +57,7 @@ import {
 } from "actions/Mail";
 import IntlMessages from "util/IntlMessages";
 import CustomScrollbars from "util/CustomScrollbars";
-import { DatePicker } from "material-ui-pickers/DatePicker/DatePicker";
-import DatePickers from "../../components/routes/pickers/date/DatePickers";
+import DatePickers from "../../components/routes/date/DatePickers";
 import NewsDetail from "../../../../components/mail/MailDetail/NewsDetail";
 
 class CreatorNewsBox extends Component {

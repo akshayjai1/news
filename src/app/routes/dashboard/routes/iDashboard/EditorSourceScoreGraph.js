@@ -1,5 +1,5 @@
 import React from "react";
-import SiteTrafficChart from "components/dashboard/Common/SiteTrafficChart";
+import SiteTrafficChart from "./SiteTrafficChart";
 import IntlMessages from "util/IntlMessages";
 
 export const Legend = props => {

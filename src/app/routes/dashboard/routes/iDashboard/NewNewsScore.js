@@ -1,7 +1,7 @@
 import React from "react";
 import ReportBox from "components/ReportBox/index";
 import { ResponsiveContainer } from "recharts";
-import YearlyProfitChart from "components/dashboard/eCommerce/YearlyProfitChart";
+import YearlyProfitChart from "../cDashboard/YearlyProfitChart";
 
 import IntlMessages from "util/IntlMessages";
 

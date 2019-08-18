@@ -58,8 +58,7 @@ import {
 } from "actions/Mail";
 import IntlMessages from "util/IntlMessages";
 import CustomScrollbars from "util/CustomScrollbars";
-import { DatePicker } from "material-ui-pickers/DatePicker/DatePicker";
-import DatePickers from "../../components/routes/pickers/date/DatePickers";
+import DatePickers from "../../components/routes/date/DatePickers";
 import NewsDetail from "../../../../components/mail/MailDetail/NewsDetail";
 
 class CreatorSentItems extends Component {
