@@ -24,15 +24,21 @@ export default [
     color: "light-blue darken-2"
   },
   {
-    id: 0,
+    id: 4,
     handle: "culture",
     title: "Culture",
     color: "purple lighten-3"
   },
   {
-    id: 1,
+    id: 5,
     handle: "miscellaneous",
     title: "Miscellaneous",
+    color: "amber darken-2"
+  },
+  {
+    id: 6,
+    handle: "all",
+    title: "All",
     color: "amber darken-2"
   }
 ];

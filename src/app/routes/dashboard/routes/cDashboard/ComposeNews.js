@@ -6,6 +6,7 @@ import ControlledEditor from "./ControlledEditor";
 import ImageUpload from "./ImageUpload";
 import VideoUpload from "./VideoUpload";
 import IntlMessages from "util/IntlMessages";
+import FilePondImageUploader from "./FilePondImageUploader";
 const options = [
   {
     value: "All",
@@ -87,7 +88,9 @@ const ComposeNews = props => {
         <Col>
           <ImageUpload />
         </Col>
-        <Col></Col>
+        <Col>
+          <FilePondImageUploader />{" "}
+        </Col>
       </Row>
       <Row>
         <Col>

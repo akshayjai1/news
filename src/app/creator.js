@@ -41,6 +41,10 @@ import { cDashboard } from "./routes/dashboard/routes/cDashboard";
 import ComposeNews from "./routes/dashboard/routes/cDashboard/ComposeNews";
 import CreatorAllNews from "./routes/dashboard/routes/cDashboard/CreatorNews/CreatorAllNews";
 import CreatorNewsBox from "./routes/mail/redux/CreatorNewsBox";
+import CreatorSentItems from "./routes/mail/redux/CreatorSentItems";
+import CreatorImages from "./routes/dashboard/routes/cDashboard/CreatorImages";
+import CreatorVideos from "./routes/dashboard/routes/cDashboard/CreatorVideos";
+import CreatorAudios from "./routes/dashboard/routes/cDashboard/CreatorAudios";
 
 class App extends React.Component {
   render() {
@@ -89,102 +93,39 @@ class App extends React.Component {
             <div className="app-main-content">
               <Switch>
                 <Route path={`${match.url}/dashboard`} component={cDashboard} />
+                <Route path={`${match.url}/compose`} component={ComposeNews} />
                 <Route
                   path={`${match.url}/newsbox`}
                   component={CreatorNewsBox}
                 />
                 <Route
-                  path={`${match.url}/sent-item`}
+                  path={`${match.url}/sent-items`}
+                  component={CreatorSentItems}
+                />
+                <Route
+                  path={`${match.url}/creator-images`}
+                  component={CreatorImages}
+                />
+                <Route
+                  path={`${match.url}/creator-videos`}
+                  component={CreatorVideos}
+                />
+                <Route
+                  path={`${match.url}/creator-audios`}
+                  component={CreatorAudios}
+                />
+                <Route
+                  path={`${match.url}/creator-report`}
                   component={asyncComponent(() =>
-                    import("./routes/mail/redux/index")
+                    import("./routes/widgets/routes/Classic")
                   )}
-                />
-                <Route path={`${match.url}/compose`} component={ComposeNews} />
-                <Route
-                  path={`${match.url}/social-apps`}
-                  component={SocialApps}
-                />
-                <Route
-                  path={`${match.url}/components`}
-                  component={Components}
-                />
-                <Route path={`${match.url}/icons`} component={Icons} />
-                <Route path={`${match.url}/form`} component={Form} />
-                <Route path={`${match.url}/editor`} component={Editors} />
-                <Route path={`${match.url}/pickers`} component={Pickers} />
-                <Route
-                  path={`${match.url}/extensions`}
-                  component={Extensions}
-                />
-                <Route path={`${match.url}/table`} component={Table} />
-                <Route path={`${match.url}/chart`} component={Chart} />
-                <Route path={`${match.url}/map`} component={Map} />
-                <Route path={`${match.url}/calendar`} component={Calendar} />
-                <Route path={`${match.url}/time-line`} component={TimeLine} />
-                <Route
-                  path={`${match.url}/custom-views`}
-                  component={CustomViews}
                 />
 
-                <Route path={`${match.url}/widgets`} component={Widgets} />
-                <Route path={`${match.url}/metrics`} component={Metrics} />
                 <Route
-                  path={`${match.url}/extra-elements`}
-                  component={ExtraElements}
-                />
-                <Route path={`${match.url}/ecommerce`} component={eCommerce} />
-                <Route path={`${match.url}/app-module`} component={AppModule} />
-                <Route
-                  path={`${match.url}/to-do`}
-                  component={asyncComponent(() =>
-                    import("./routes/todo/basic/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/to-do-redux`}
-                  component={asyncComponent(() =>
-                    import("./routes/todo/redux/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/mail`}
-                  component={asyncComponent(() =>
-                    import("./routes/mail/basic/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/mail-redux`}
-                  component={asyncComponent(() =>
-                    import("./routes/mail/redux/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/chat`}
-                  component={asyncComponent(() =>
-                    import("./routes/chatPanel/basic/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/chat-redux`}
+                  path={`${match.url}/creator-chat`}
                   component={asyncComponent(() =>
                     import("./routes/chatPanel/redux/index")
                   )}
-                />
-                <Route
-                  path={`${match.url}/contact`}
-                  component={asyncComponent(() =>
-                    import("./routes/contact/basic/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/contact-redux`}
-                  component={asyncComponent(() =>
-                    import("./routes/contact/redux/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/extra-pages`}
-                  component={ExtraPages}
                 />
                 <Route
                   component={asyncComponent(() =>

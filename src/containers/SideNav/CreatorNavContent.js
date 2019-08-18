@@ -178,23 +178,31 @@ class SidenavContent extends Component {
           />
           <SingleMenu to="/app/newsbox" nameId="newsbox" icon="email" />
           <SingleMenu
-            to="/app/dashboard"
+            to="/app/sent-items"
             nameId="sent-items"
             icon="arrow-right-top"
           />
           <SingleMenu
-            to="/app/allnews"
+            to="/app/creator-images"
             nameId="images"
             icon="collection-image"
           />
-          <SingleMenu to="/app/allnews" nameId="audios" icon="playlist-audio" />
           <SingleMenu
-            to="/app/allnews"
+            to="/app/creator-audios"
+            nameId="audios"
+            icon="playlist-audio"
+          />
+          <SingleMenu
+            to="/app/creator-videos"
             nameId="videos"
             icon="collection-video"
           />
-          <SingleMenu to="/app/chat" nameId="chat" icon="comment" />
-          <SingleMenu to="/app/allnews" nameId="report" icon="view-list" />
+          <SingleMenu to="/app/creator-chat" nameId="chat" icon="comment" />
+          <SingleMenu
+            to="/app/creator-report"
+            nameId="report"
+            icon="view-list"
+          />
         </ul>
       </CustomScrollbars>
     );

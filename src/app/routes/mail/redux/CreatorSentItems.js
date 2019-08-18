@@ -62,7 +62,7 @@ import { DatePicker } from "material-ui-pickers/DatePicker/DatePicker";
 import DatePickers from "../../components/routes/pickers/date/DatePickers";
 import NewsDetail from "../../../../components/mail/MailDetail/NewsDetail";
 
-class CreatorNewsBox extends Component {
+class CreatorSentItems extends Component {
   MailSideBar = () => {
     return (
       <div className="module-side">
@@ -713,4 +713,4 @@ export default connect(
     setCurrentMailNull,
     updateMailSearch
   }
-)(CreatorNewsBox);
+)(CreatorSentItems);
