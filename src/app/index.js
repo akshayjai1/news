@@ -4,24 +4,6 @@ import { connect } from "react-redux";
 import Header from "components/Header/index";
 import Sidebar from "containers/SideNav/index";
 import Footer from "components/Footer";
-import Widgets from "./routes/widgets";
-import Metrics from "./routes/metrics";
-import Components from "./routes/components";
-import Icons from "./routes/icons/index";
-import Form from "./routes/form";
-import Editors from "./routes/editors";
-import Pickers from "./routes/pickers";
-import Extensions from "./routes/extensions";
-import Table from "./routes/table";
-import Chart from "./routes/charts";
-import Map from "./routes/map";
-import Calendar from "./routes/calendar";
-import TimeLine from "./routes/timeLine";
-import CustomViews from "./routes/customViews";
-import ExtraElements from "./routes/extraElements";
-import eCommerce from "./routes/eCommerce";
-import AppModule from "./routes/appModule";
-import ExtraPages from "./routes/extraPages";
 import Tour from "../components/Tour/index";
 import {
   ABOVE_THE_HEADER,
@@ -34,7 +16,6 @@ import ColorOption from "containers/Customizer/ColorOption";
 import { isIOS, isMobile } from "react-device-detect";
 import asyncComponent from "../util/asyncComponent";
 import TopNav from "components/TopNav";
-import SocialApps from "./routes/socialApps";
 import { iDashboard } from "./routes/dashboard/routes/iDashboard";
 import AllNews from "./routes/dashboard/routes/AllNews/AllNews";
 
@@ -134,58 +115,6 @@ class App extends React.Component {
                   path={`${match.url}/freelancers/freelancer-3`}
                   component={AllNews}
                 />
-                <Route
-                  path={`${match.url}/social-apps`}
-                  component={SocialApps}
-                />
-                <Route
-                  path={`${match.url}/components`}
-                  component={Components}
-                />
-                <Route path={`${match.url}/icons`} component={Icons} />
-                <Route path={`${match.url}/form`} component={Form} />
-                <Route path={`${match.url}/editor`} component={Editors} />
-                <Route path={`${match.url}/pickers`} component={Pickers} />
-                <Route
-                  path={`${match.url}/extensions`}
-                  component={Extensions}
-                />
-                <Route path={`${match.url}/table`} component={Table} />
-                <Route path={`${match.url}/chart`} component={Chart} />
-                <Route path={`${match.url}/map`} component={Map} />
-                <Route path={`${match.url}/calendar`} component={Calendar} />
-                <Route path={`${match.url}/time-line`} component={TimeLine} />
-                <Route
-                  path={`${match.url}/custom-views`}
-                  component={CustomViews}
-                />
-
-                <Route path={`${match.url}/widgets`} component={Widgets} />
-                <Route path={`${match.url}/metrics`} component={Metrics} />
-                <Route
-                  path={`${match.url}/extra-elements`}
-                  component={ExtraElements}
-                />
-                <Route path={`${match.url}/ecommerce`} component={eCommerce} />
-                <Route path={`${match.url}/app-module`} component={AppModule} />
-                <Route
-                  path={`${match.url}/to-do`}
-                  component={asyncComponent(() =>
-                    import("./routes/todo/basic/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/to-do-redux`}
-                  component={asyncComponent(() =>
-                    import("./routes/todo/redux/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/mail`}
-                  component={asyncComponent(() =>
-                    import("./routes/mail/basic/index")
-                  )}
-                />
 
                 <Route
                   path={`${match.url}/mail-redux`}
@@ -204,22 +133,6 @@ class App extends React.Component {
                   component={asyncComponent(() =>
                     import("./routes/chatPanel/redux/index")
                   )}
-                />
-                <Route
-                  path={`${match.url}/contact`}
-                  component={asyncComponent(() =>
-                    import("./routes/contact/basic/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/contact-redux`}
-                  component={asyncComponent(() =>
-                    import("./routes/contact/redux/index")
-                  )}
-                />
-                <Route
-                  path={`${match.url}/extra-pages`}
-                  component={ExtraPages}
                 />
                 <Route
                   component={asyncComponent(() =>

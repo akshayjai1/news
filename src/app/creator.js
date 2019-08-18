@@ -92,12 +92,6 @@ class App extends React.Component {
                   path={`${match.url}/creator-audios`}
                   component={CreatorAudios}
                 />
-                <Route
-                  path={`${match.url}/creator-report`}
-                  component={asyncComponent(() =>
-                    import("./routes/widgets/routes/Classic")
-                  )}
-                />
 
                 <Route
                   path={`${match.url}/creator-chat`}
