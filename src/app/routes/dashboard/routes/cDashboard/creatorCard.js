@@ -11,14 +11,14 @@ const CreatorCard = props => {
       <div className="col-lg-3 col-sm-6 col-12">
         <ReportBox
           styleName="bg-primary text-white p-3"
-          price="560"
-          icon="collection-plus"
-          detail={<IntlMessages id="total-news" />}
+          price="85K+"
+          icon="group-work"
+          detail={<IntlMessages id="newsagency" />}
           subHeadingColor="text-white"
         >
           <ResponsiveContainer width="100%" height={100}>
             <YearlyProfitChart
-              centerText="560"
+              centerText="1800"
               height={100}
               chartType="newsDoughnut"
               backgroundColor={[
@@ -86,7 +86,7 @@ const CreatorCard = props => {
         <ReportBox
           styleName="bg-pink text-white p-3"
           icon="money-box"
-          price="$1600"
+          price="RO 1600"
           detail={<IntlMessages id="total-earnings" />}
           subHeadingColor="text-white"
         >
@@ -122,12 +122,12 @@ const CreatorCard = props => {
         <ReportBox
           styleName="bg-orange text-white p-3"
           icon="money"
-          price="$120"
+          price="RO 120"
           detail={<IntlMessages id="last-week-earnings" />}
           subHeadingColor="text-white"
         >
           <YearlyProfitChart
-            centerText="120"
+            centerText=""
             height={100}
             chartType="newsDoughnut"
             backgroundColor={[

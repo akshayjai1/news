@@ -41,9 +41,23 @@ const ComposeNews = props => {
   return (
     <div className="app-wrapper">
       <FormGroup>
+        <Label>News Title</Label>
+        <Row>
+          <Col md={8}>
+            <Input />
+          </Col>
+          <Col>
+            <Button>
+              <i className={`zmdi zmdi-mic zmdi-hc-fw`} />
+              Record Audio{" "}
+            </Button>
+          </Col>
+        </Row>
+      </FormGroup>
+      <FormGroup>
         <Label>Select News Category</Label>
         <Row>
-          <Col>
+          <Col md={4}>
             <Select
               options={options}
               isMulti
@@ -56,26 +70,12 @@ const ComposeNews = props => {
         </Row>
       </FormGroup>
       <FormGroup>
-        <Label>News Title</Label>
-        <Row>
-          <Col>
-            <Input />
-          </Col>
-          <Col>
-            <Button>
-              <i className={`zmdi zmdi-mic zmdi-hc-fw`} />
-              Record Audio{" "}
-            </Button>
-          </Col>
-        </Row>
-      </FormGroup>
-      <FormGroup>
         <Label>News Description</Label>
-        <Row>
+        <Row md={8}>
           <Col>
             <ControlledEditor />
           </Col>
-          <Col>
+          <Col md={4}>
             <Button>
               <i className={`zmdi zmdi-mic zmdi-hc-fw`} />
               Record Audio{" "}
@@ -85,21 +85,19 @@ const ComposeNews = props => {
       </FormGroup>
       {/* <ImagesUpload /> */}
       <Row>
-        <Col>
-          <ImageUpload />
-        </Col>
-        <Col>
+        <Col md={8}>
           <FilePondImageUploader />{" "}
         </Col>
+        <Col></Col>
       </Row>
       <Row>
-        <Col>
+        <Col md={8}>
           <VideoUpload />
         </Col>
         <Col></Col>
       </Row>
       <Row>
-        <Col>
+        <Col md={8}>
           <Button variant="contained" color="primary" className="btn-block">
             <i className={`zmdi zmdi-upload zmdi-hc-fw`} />
             <IntlMessages id="submit-news" />

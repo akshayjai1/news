@@ -2,8 +2,8 @@ import React from "react";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import InputLabel from "@material-ui/core/InputLabel";
-import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 
 import { FilePond, registerPlugin } from "react-filepond";
@@ -30,12 +30,12 @@ class FilePondImageUploader extends React.Component {
       // Set initial files, type 'local' means this is a file
       // that has already been uploaded to the server (see docs)
       files: [
-        // {
-        //   source: "index.html",
-        //   options: {
-        //     type: "local"
-        //   }
-        // }
+        {
+          source: "index.html",
+          options: {
+            type: "local"
+          }
+        }
       ],
       label: "All",
       name: ""
