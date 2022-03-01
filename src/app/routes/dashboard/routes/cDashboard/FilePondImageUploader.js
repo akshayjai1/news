@@ -122,10 +122,9 @@ class FilePondImageUploader extends React.Component {
         </div>
         <div className="col-12">
           <Button
-            size="small"
             variant="contained"
             color="primary"
-            className="text-capitalize"
+            className="text-capitalize btn-block"
           >
             Upload
           </Button>

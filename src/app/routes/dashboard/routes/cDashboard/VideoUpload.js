@@ -65,6 +65,7 @@ class VideoUpload extends React.Component {
   render() {
     let { imagePreviewUrl } = this.state;
     let $imagePreview = null;
+    let button = null;
     if (imagePreviewUrl) {
       $imagePreview = (
         <Player
@@ -73,9 +74,55 @@ class VideoUpload extends React.Component {
           src={imagePreviewUrl}
         />
       );
+      button = (
+        <Button
+          variant="contained"
+          color="primary"
+          className="text-capitalize btn-block"
+        >
+          Upload
+        </Button>
+      );
     } else {
       $imagePreview = (
         <div /> // className="previewText">Please select an Video for Upload</div>
+      );
+      button = (
+        <div
+          className="upload-btn-wrapper"
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            display: "inline-block"
+          }}
+        >
+          <button
+            class="btn"
+            style={{
+              border: "2px solid gray",
+              color: "gray",
+              backgroundColor: "white",
+              padding: "8px 20px",
+              borderRadius: "8px",
+              fontSize: "20px",
+              fontWeight: "bold"
+            }}
+          >
+            Browse Video to Upload
+          </button>
+          <input
+            type="file"
+            name="myfile"
+            onChange={e => this._handleImageChange(e)}
+            style={{
+              fontSize: "100px",
+              position: "absolute",
+              left: 0,
+              top: 0,
+              opacity: 0
+            }}
+          />
+        </div>
       );
     }
 
@@ -109,80 +156,13 @@ class VideoUpload extends React.Component {
               ))}
             </TextField>
           </div>
+          <div className="col-md-4 col-12">{button}</div>
         </div>
-        {/* <div className="App">
-          <FilePond
-            ref={ref => (this.pond = ref)}
-            files={this.state.files}
-            allowMultiple={true}
-            maxFiles={3}
-            server="/api"
-            onupdatefiles={fileItems => {
-              // Set currently active file objects to this.state
-              this.setState({
-                files: fileItems.map(fileItem => fileItem.file)
-              });
-            }}
-          ></FilePond>
-        </div> */}
+
         <div className="row">
-          <div className="previewComponent">
-            <form onSubmit={e => this._handleSubmit(e)}>
-              <div
-                className="upload-btn-wrapper"
-                style={{
-                  position: "relative",
-                  overflow: "hidden",
-                  display: "inline-block"
-                }}
-              >
-                <button
-                  class="btn"
-                  style={{
-                    border: "2px solid gray",
-                    color: "gray",
-                    backgroundColor: "white",
-                    padding: "8px 20px",
-                    borderRadius: "8px",
-                    fontSize: "20px",
-                    fontWeight: "bold"
-                  }}
-                >
-                  Upload a Video
-                </button>
-                <input
-                  type="file"
-                  name="myfile"
-                  onChange={e => this._handleImageChange(e)}
-                  style={{
-                    fontSize: "100px",
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    opacity: 0
-                  }}
-                />
-              </div>
-              {/* <button
-            className="submitButton"
-            type="submit"
-            onClick={e => this._handleSubmit(e)}
-          >
-            Upload Image
-          </button> */}
-            </form>
-            <div className="imgPreview">{$imagePreview}</div>
+          <div className="imgPreview" style={{ width: "100%" }}>
+            {$imagePreview}
           </div>
-        </div>
-        <div className="col-12">
-          <Button
-            size="small"
-            variant="contained"
-            color="primary"
-            className="text-capitalize"
-          >
-            Upload
-          </Button>
         </div>
       </Widget>
     );

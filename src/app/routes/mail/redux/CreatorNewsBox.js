@@ -269,7 +269,7 @@ class CreatorNewsBox extends Component {
       >
         <span className="jr-link">
           <i className={`zmdi zmdi-label-alt text-${label.color}`} />
-          <span>{label.title}</span>
+          {/* <span>{label.title}</span> */}
         </span>
       </li>
     ));
@@ -405,7 +405,7 @@ class CreatorNewsBox extends Component {
       <div className="app-wrapper">
         <div className="animated slideInUpTiny animation-duration-3">
           <div className="app-module">
-            {/* <div className="d-block d-xl-none">
+            <div className="d-block d-xl-none">
               <Drawer
                 open={this.props.drawerState}
                 onClose={this.onToggleDrawer.bind(this)}
@@ -415,7 +415,7 @@ class CreatorNewsBox extends Component {
             </div>
             <div className="app-module-sidenav d-none d-xl-flex">
               {this.MailSideBar()}
-            </div> */}
+            </div>
 
             <div className="module-box">
               <div className="module-box-header">
